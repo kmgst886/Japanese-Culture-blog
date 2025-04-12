@@ -84,6 +84,7 @@
 
         nav ul li {
             margin: 0 15px;
+            position: relative; /* To position dropdown */
         }
 
         nav ul li a {
@@ -95,6 +96,33 @@
 
         nav ul li a:hover {
             color: #3E4A5A; /* Dark Indigo */
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #F8AFA6;
+            border: 1px solid #3E4A5A;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .dropdown a {
+            padding: 10px;
+            display: block;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .dropdown a:hover {
+            background-color: #3E4A5A;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block; /* Show dropdown on hover */
         }
 
         #search-bar {
@@ -267,7 +295,15 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#categories">Categories</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About</a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown">
+                        <a href="#about-history">History</a>
+                        <a href="#about-team">Our Team</a>
+                        <a href="#about-mission">Mission</a>
+                        <a href="#about-vision">Vision</a>
+                    </div>
+                </li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><a href="#popular">Popular Posts</a></li>
@@ -276,116 +312,20 @@
         </div>
     </nav>
 
-    <!-- Image Slideshow -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="https://placekitten.com/1200/400" alt="Japanese Landscape 1" class="slide-images">
-        </div>
-        <div class="mySlides fade">
-            <img src="https://placekitten.com/1200/400" alt="Japanese Culture 2" class="slide-images">
-        </div>
-        <div class="mySlides fade">
-            <img src="https://placekitten.com/1200/400" alt="Japanese Festival" class="slide-images">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
     <!-- Main Content -->
     <main>
-        <section id="home">
-            <h2>Welcome to the World of Japanese Culture</h2>
-            <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
-ChatGPT said:
-    </section>
+        <!-- Your other content sections here -->
+    </main>
 
-    <section id="categories">
-        <h2>Our Categories</h2>
-        <div class="categories">
-            <div class="category">
-                <h3>Traditional Culture</h3>
-                <p>Explore the deep traditions and cultural practices that have been passed down for generations.</p>
-            </div>
-            <div class="category">
-                <h3>Modern Japan</h3>
-                <p>See how Japan blends its ancient traditions with cutting-edge technology in today's society.</p>
-            </div>
-            <div class="category">
-                <h3>Travel</h3>
-                <p>Discover Japan's scenic landscapes, ancient temples, and bustling cities.</p>
-            </div>
-            <div class="category">
-                <h3>Food & Drink</h3>
-                <p>Savor the tastes of sushi, ramen, sake, and other delicious Japanese dishes.</p>
-            </div>
-            <div class="category">
-                <h3>Language Tips</h3>
-                <p>Learn Japanese language basics to help you navigate the country with ease.</p>
-            </div>
-            <div class="category">
-                <h3>Festivals & Events</h3>
-                <p>Immerse yourself in Japan's annual festivals and vibrant cultural celebrations.</p>
-            </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
         </div>
-    </section>
-
-    <section id="popular">
-        <h2>Popular Posts</h2>
-        <article class="post">
-            <h3>5 Must-See Places in Japan</h3>
-            <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
-        </article>
-        <article class="post">
-            <h3>Understanding Japanese Tea Ceremony</h3>
-            <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
-        </article>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
-    </section>
-
-    <section id="resources">
-        <h2>Useful Resources</h2>
-        <ul>
-            <li><a href="#">Learn Japanese Language</a></li>
-            <li><a href="#">Top Travel Destinations in Japan</a></li>
-            <li><a href="#">Japanese Cultural Podcasts</a></li>
-            <li><a href="#">Guide to Japanese Festivals</a></li>
-        </ul>
-    </section>
-</main>
-
-<!-- Footer Section -->
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
 <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        let slides = document.getElementsByClassName("mySlides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
-    }
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+// Image Slideshow and other scripts here
 </script>
+</body>
+</html>
