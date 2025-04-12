@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Explore Japanese Culture</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Typography */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            border: 15px solid #ccc;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            font-family: 'Brush Script MT', cursive;
+            color: #F8AFA6;
+        }
+
+        /* Menu Bar Container */
+        nav {
+            background-color: #F8AFA6;
+            padding: 1rem 0;
+            border-top: 5px solid #3E4A5A;
+            border-bottom: 5px solid #3E4A5A;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3E4A5A;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #f8f8f8;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            height: 150px;
+        }
+
+        .contact-form input[type="text"] {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #3E4A5A;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #F8AFA6;
+        }
+
+        /* Post Section */
+        .posts-container {
+            margin-top: 2rem;
+        }
+
+        .post {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h3 {
+            font-size: 1.5rem;
+            color: #3E4A5A;
+            margin-bottom: 0.5rem;
+        }
+
+        .post p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .comment-section {
+            margin-top: 1rem;
+        }
+
+        .comment {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .comment textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .comment button {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comment button:hover {
+            background-color: #F8AFA6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Menu Bar Container -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="popular.html">Popular Posts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Contact Us & Share Your Thoughts!</h2>
+        <p>We'd love to hear your thoughts on Japanese culture. Feel free to post a blog and share your ideas with us! Other visitors can reply to your post.</p>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Post Your Thoughts</h3>
+            <form id="postForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <textarea id="userPost" placeholder="What are your thoughts about Japanese culture?" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="posts-container" id="postsContainer">
+            <!-- Posts will appear here dynamically -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to submit a new post
+        document.getElementById("postForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const userName = document.getElementById("userName").value;
+            const userPost = document.getElementById("userPost").value;
+
+            if (userName && userPost) {
+                // Create new post
+                const postContainer = document.createElement("div");
+                postContainer.classList.add("post");
+
+                const postTitle = document.createElement("h3");
+                postTitle.textContent = `${userName}'s Thoughts`;
+
+                const postContent = document.createElement("p");
+                postContent.textContent = userPost;
+
+                const commentSection = document.createElement("div");
+                commentSection.classList.add("comment-section");
+
+                const commentBox = document.createElement("textarea");
+                commentBox.placeholder = "Write a reply...";
+
+                const replyButton = document.createElement("button");
+                replyButton.textContent = "Reply";
+
+                replyButton.addEventListener("click", function() {
+                    const reply = document.createElement("div");
+                    reply.classList.add("comment");
+
+                    const replyContent = document.createElement("p");
+                    replyContent.textContent = commentBox.value;
+
+                    reply.appendChild(replyContent);
+                    commentSection.appendChild(reply);
+
+                    commentBox.value = ""; // Clear the input box
+                });
+
+                postContainer.appendChild(postTitle);
+                postContainer.appendChild(postContent);
+                postContainer.appendChild(commentBox);
+                postContainer.appendChild(replyButton);
+                postContainer.appendChild(commentSection);
+
+                // Add the new post to the posts container
+                document.getElementById("postsContainer").prepend(postContainer);
+
+                // Clear the form
+                document.getElementById("userName").value = "";
+                document.getElementById("userPost").value = "";
+            }
+        });
+    </script>
+
+</body>
+</html>
