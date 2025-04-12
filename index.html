@@ -312,9 +312,66 @@
         </div>
     </nav>
 
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://placekitten.com/1200/400" alt="Japanese Landscape 1" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://placekitten.com/1200/400" alt="Japanese Culture 2" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://placekitten.com/1200/400" alt="Japanese Festival" class="slide-images">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
     <!-- Main Content -->
     <main>
-        <!-- Your other content sections here -->
+        <section id="home">
+            <h2>Welcome to the World of Japanese Culture</h2>
+            <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
+        </section>
+
+        <section id="categories">
+            <h2>Our Categories</h2>
+            <div class="categories">
+                <div class="category">
+                    <h3>Traditional Culture</h3>
+                    <p>Explore the deep traditions and cultural practices that have been passed down for generations.</p>
+                </div>
+                <div class="category">
+                    <h3>Modern Japan</h3>
+                    <p>See how Japan blends its ancient traditions with cutting-edge technology in today's society.</p>
+                </div>
+                <div class="category">
+                    <h3>Travel</h3>
+                    <p>Discover Japan's scenic landscapes, ancient temples, and bustling cities.</p>
+                </div>
+                <div class="category">
+                    <h3>Food & Drink</h3>
+                    <p>Savor the tastes of sushi, ramen, sake, and other delicious Japanese dishes.</p>
+                </div>
+                <div class="category">
+                    <h3>Language Tips</h3>
+                    <p>Learn Japanese language basics to help you navigate conversations while visiting Japan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="posts">
+            <h2>Latest Posts</h2>
+            <div class="post">
+                <h3>Understanding the Cherry Blossom Festival</h3>
+                <p>Learn about the cultural significance of sakura and the celebrations around the annual cherry blossom festival.</p>
+            </div>
+            <div class="post">
+                <h3>The Art of Tea Ceremony</h3>
+                <p>A deep dive into the Japanese tea ceremony and its historical roots in Zen Buddhism.</p>
+            </div>
+        </section>
     </main>
 
     <!-- Footer Section -->
@@ -325,7 +382,24 @@
     </footer>
 
 <script>
-// Image Slideshow and other scripts here
+// Image Slideshow script
+let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    if (slideIndex >= slides.length) { slideIndex = 0 }
+    if (slideIndex < 0) { slideIndex = slides.length - 1 }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+}
 </script>
 </body>
 </html>
