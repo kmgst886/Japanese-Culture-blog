@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             line-height: 1.6;
             background-color: #fff;
             color: #333;
-            border: 10px solid #3E4A5A; /* Fancy border around the whole page */
+            border: 15px solid #ccc; /* Thicker gray border */
             border-radius: 15px;
             padding: 20px;
             margin: 0;
@@ -30,28 +30,34 @@
             font-family: 'Brush Script MT', cursive; /* Brush-style font for headers */
         }
 
-        /* Fancy Title Animation */
+        /* Fancy Title Animation and Background */
+        .site-title-container {
+            background-color: #3E4A5A; /* Blue Box */
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+        }
+
         .site-title {
             font-family: 'Georgia', serif;
             font-size: 4rem;
-            color: #3E4A5A;
-            text-align: center;
-            margin-top: 2rem;
+            color: white;
             animation: titleAnimation 3s ease-in-out infinite;
         }
 
         @keyframes titleAnimation {
             0% {
                 transform: scale(1);
-                color: #3E4A5A;
+                color: #F8AFA6; /* Cherry blossom pink */
             }
             50% {
                 transform: scale(1.1);
-                color: #F8AFA6; /* Cherry blossom pink */
+                color: #F8AFA6;
             }
             100% {
                 transform: scale(1);
-                color: #3E4A5A;
+                color: #F8AFA6;
             }
         }
 
@@ -250,7 +256,7 @@
 
     <!-- Header Section -->
     <header>
-        <div class="container">
+        <div class="site-title-container">
             <h1 class="site-title">Explore Japanese Culture</h1>
         </div>
     </header>
@@ -291,96 +297,95 @@
         <section id="home">
             <h2>Welcome to the World of Japanese Culture</h2>
             <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
-        </section>
+ChatGPT said:
+    </section>
 
-        <section id="categories">
-            <h2>Explore Our Categories</h2>
-            <div class="categories">
-                <div class="category">
-                    <h3>Traditional Culture</h3>
-                    <p>Explore the deep traditions and cultural practices that have been passed down for generations.</p>
-                </div>
-                <div class="category">
-                    <h3>Modern Japan</h3>
-                    <p>See how Japan blends its ancient traditions with cutting-edge technology in today's society.</p>
-                </div>
-                <div class="category">
-                    <h3>Travel</h3>
-                    <p>Discover Japan's scenic landscapes, ancient temples, and bustling cities.</p>
-                </div>
-                <div class="category">
-                    <h3>Food & Drink</h3>
-                    <p>Savor the tastes of sushi, ramen, sake, and other delicious Japanese dishes.</p>
-                </div>
-                <div class="category">
-                    <h3>Language Tips</h3>
-                    <p>Learn Japanese language basics to help you navigate the country with ease.</p>
-                </div>
-                <div class="category">
-                    <h3>Festivals & Events</h3>
-                    <p>Immerse yourself in Japan's annual festivals and vibrant cultural celebrations.</p>
-                </div>
+    <section id="categories">
+        <h2>Our Categories</h2>
+        <div class="categories">
+            <div class="category">
+                <h3>Traditional Culture</h3>
+                <p>Explore the deep traditions and cultural practices that have been passed down for generations.</p>
             </div>
-        </section>
-
-        <section id="popular">
-            <h2>Popular Posts</h2>
-            <article class="post">
-                <h3>5 Must-See Places in Japan</h3>
-                <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
-            </article>
-            <article class="post">
-                <h3>Understanding Japanese Tea Ceremony</h3>
-                <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
-            </article>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
-        </section>
-
-        <section id="resources">
-            <h2>Useful Resources</h2>
-            <ul>
-                <li><a href="#">Learn Japanese Language</a></li>
-                <li><a href="#">Top Travel Destinations in Japan</a></li>
-                <li><a href="#">Japanese Cultural Podcasts</a></li>
-                <li><a href="#">Guide to Japanese Festivals</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+            <div class="category">
+                <h3>Modern Japan</h3>
+                <p>See how Japan blends its ancient traditions with cutting-edge technology in today's society.</p>
+            </div>
+            <div class="category">
+                <h3>Travel</h3>
+                <p>Discover Japan's scenic landscapes, ancient temples, and bustling cities.</p>
+            </div>
+            <div class="category">
+                <h3>Food & Drink</h3>
+                <p>Savor the tastes of sushi, ramen, sake, and other delicious Japanese dishes.</p>
+            </div>
+            <div class="category">
+                <h3>Language Tips</h3>
+                <p>Learn Japanese language basics to help you navigate the country with ease.</p>
+            </div>
+            <div class="category">
+                <h3>Festivals & Events</h3>
+                <p>Immerse yourself in Japan's annual festivals and vibrant cultural celebrations.</p>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
+    <section id="popular">
+        <h2>Popular Posts</h2>
+        <article class="post">
+            <h3>5 Must-See Places in Japan</h3>
+            <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
+        </article>
+        <article class="post">
+            <h3>Understanding Japanese Tea Ceremony</h3>
+            <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
+        </article>
+    </section>
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 4000); // Change image every 4 seconds
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Useful Resources</h2>
+        <ul>
+            <li><a href="#">Learn Japanese Language</a></li>
+            <li><a href="#">Top Travel Destinations in Japan</a></li>
+            <li><a href="#">Japanese Cultural Podcasts</a></li>
+            <li><a href="#">Guide to Japanese Festivals</a></li>
+        </ul>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
         }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-    </script>
-</body>
-</html>
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+</script>
