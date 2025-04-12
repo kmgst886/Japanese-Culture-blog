@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Explore Japanese Culture</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Typography */
+        body {
+            font-family: 'Georgia', serif; /* Serif for content */
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Brush Script MT', cursive; /* Brush-style font for headers */
+        }
+
+        .site-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            color: #3E4A5A;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #3E4A5A; /* Dark indigo */
+            color: white;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #F8AFA6; /* Cherry blossom pink */
+        }
+
+        #search-bar {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .category {
+            background-color: #fff;
+            padding: 1.5rem;
+            flex: 1 1 calc(33% - 1rem);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h3 {
+            font-size: 1.5rem;
+            color: #F8AFA6;
+            margin-bottom: 0.5rem;
+        }
+
+        .category p {
+            font-size: 1rem;
+        }
+
+        /* Post Snippets */
+        .post {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h3 {
+            font-size: 1.8rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        .post p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .categories {
+                flex-direction: column;
+            }
+
+            .category {
+                flex: 1 1 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #search-bar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="site-title">Explore Japanese Culture</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#popular">Popular Posts</a></li>
+                </ul>
+                <input type="text" id="search-bar" placeholder="Search...">
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <h2>Welcome to the World of Japanese Culture</h2>
+            <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
+        </section>
+
+        <section id="categories">
+            <h2>Explore Our Categories</h2>
+            <div class="categories">
+                <div class="category">
+                    <h3>Traditional Culture</h3>
+                    <p>Explore the deep traditions and cultural practices that have been passed down for generations.</p>
+                </div>
+                <div class="category">
+                    <h3>Modern Japan</h3>
+                    <p>See how Japan blends its ancient traditions with cutting-edge technology in today's society.</p>
+                </div>
+                <div class="category">
+                    <h3>Travel</h3>
+                    <p>Discover Japan's scenic landscapes, ancient temples, and bustling cities.</p>
+                </div>
+                <div class="category">
+                    <h3>Food & Drink</h3>
+                    <p>Savor the tastes of sushi, ramen, sake, and other delicious Japanese dishes.</p>
+                </div>
+                <div class="category">
+                    <h3>Language Tips</h3>
+                    <p>Learn Japanese language basics to help you navigate the country with ease.</p>
+                </div>
+                <div class="category">
+                    <h3>Festivals & Events</h3>
+                    <p>Immerse yourself in Japan's annual festivals and vibrant cultural celebrations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="popular">
+            <h2>Popular Posts</h2>
+            <!-- Example of a blog post snippet -->
+            <article class="post">
+                <h3>5 Must-See Places in Japan</h3>
+                <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
+            </article>
+            <article class="post">
+                <h3>Understanding Japanese Tea Ceremony</h3>
+                <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
+            <!-- Contact form goes here -->
+        </section>
+
+        <section id="resources">
+            <h2>Useful Resources</h2>
+            <ul>
+                <li><a href="#">Learn Japanese Language</a></li>
+                <li><a href="#">Top Travel Destinations in Japan</a></li>
+                <li><a href="#">Japanese Cultural Podcasts</a></li>
+                <li><a href="#">Guide to Japanese Festivals</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
