@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movie Blog - Movie Title</title>
+    <title>Movie Blog - The Magnificent Movie</title>
     <style>
         /* General Reset */
         * {
@@ -77,71 +77,35 @@
             padding: 2rem 0;
         }
 
-        /* Section Boxes */
-        section {
-            margin: 2rem 0;
-            padding: 2rem;
+        /* Container Boxes */
+        .container-box {
             background-color: #f8f8f8;
+            padding: 2rem;
+            margin-bottom: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        .container-box h2 {
             font-size: 2rem;
             color: #333;
             margin-bottom: 1rem;
         }
 
-        p {
+        .container-box p {
             font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Picture Boxes */
-        .movie-boxes {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .movie-box {
-            background-color: #fff;
-            width: 280px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .movie-box img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .movie-box .movie-info {
-            padding: 1rem;
-        }
-
-        .movie-box h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .movie-box p {
-            font-size: 1rem;
             color: #555;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .movie-boxes {
+            nav ul {
                 flex-direction: column;
-                align-items: center;
             }
-            .movie-box {
-                width: 90%;
+
+            nav ul li {
+                margin: 10px 0;
             }
         }
     </style>
@@ -169,45 +133,35 @@
     <!-- Main Content -->
     <main>
 
-        <!-- Movie Categories -->
-        <section id="movie-categories">
-            <h2>Explore Categories for "The Magnificent Movie"</h2>
-            <div class="movie-boxes">
-                <!-- Category 1 -->
-                <div class="movie-box">
-                    <img src="category1.jpg" alt="Category 1 Image">
-                    <div class="movie-info">
-                        <h3>Character Analysis</h3>
-                        <p>Dive into the complex characters that make this film unforgettable.</p>
-                    </div>
-                </div>
+        <!-- Container 1 -->
+        <section id="container1">
+            <div class="container-box">
+                <h2>Character Development</h2>
+                <p>In "The Magnificent Movie", the depth of character development is one of its strongest aspects. Each character is thoughtfully crafted, showing growth and transformation throughout the narrative. From the protagonist’s struggle with inner conflict to the antagonist’s motives that challenge the hero, every character plays a crucial role in driving the plot forward.</p>
+            </div>
+        </section>
 
-                <!-- Category 2 -->
-                <div class="movie-box">
-                    <img src="category2.jpg" alt="Category 2 Image">
-                    <div class="movie-info">
-                        <h3>Visual Effects</h3>
-                        <p>Explore the stunning visuals and ground-breaking effects used in this movie.</p>
-                    </div>
-                </div>
+        <!-- Container 2 -->
+        <section id="container2">
+            <div class="container-box">
+                <h2>Visual Aesthetics</h2>
+                <p>The film’s visual design is absolutely stunning, showcasing breathtaking landscapes, intricate set designs, and breathtaking cinematography. The use of color, light, and shadow creates an atmosphere that amplifies the movie's emotional undertones and heightens the viewer's experience. The stunning visuals are a masterpiece that blends art and storytelling seamlessly.</p>
+            </div>
+        </section>
 
-                <!-- Category 3 -->
-                <div class="movie-box">
-                    <img src="category3.jpg" alt="Category 3 Image">
-                    <div class="movie-info">
-                        <h3>Plot Breakdown</h3>
-                        <p>Understand the intricacies of the movie's plot and its deeper meaning.</p>
-                    </div>
-                </div>
+        <!-- Container 3 -->
+        <section id="container3">
+            <div class="container-box">
+                <h2>Plot and Storyline</h2>
+                <p>The plot of "The Magnificent Movie" is intricately woven, with each twist and turn adding to the overall suspense and mystery. The storyline explores complex themes of love, betrayal, and redemption. With cleverly placed foreshadowing and unpredictable events, the movie keeps the audience on the edge of their seats, wondering what will happen next.</p>
+            </div>
+        </section>
 
-                <!-- Category 4 -->
-                <div class="movie-box">
-                    <img src="category4.jpg" alt="Category 4 Image">
-                    <div class="movie-info">
-                        <h3>Soundtrack and Music</h3>
-                        <p>A look at how the soundtrack amplifies the movie's emotional impact.</p>
-                    </div>
-                </div>
+        <!-- Container 4 -->
+        <section id="container4">
+            <div class="container-box">
+                <h2>Music and Soundtrack</h2>
+                <p>The movie’s soundtrack is powerful, with music that perfectly complements the story’s emotional highs and lows. From dramatic orchestral scores during intense action sequences to subtle melodies during quieter moments, the music creates an immersive experience that resonates with the audience. The film’s sound design helps convey the themes and emotions more profoundly, enhancing the movie's impact.</p>
             </div>
         </section>
 
