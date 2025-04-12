@@ -19,6 +19,11 @@
             line-height: 1.6;
             background-color: #fff;
             color: #333;
+            border: 10px solid #3E4A5A; /* Fancy border around the whole page */
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2, h3 {
@@ -48,20 +53,6 @@
                 transform: scale(1);
                 color: #3E4A5A;
             }
-        }
-
-        /* Header Section */
-        header {
-            background-color: #3E4A5A; /* Dark indigo */
-            color: white;
-            padding: 1rem 0;
-        }
-
-        header .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            text-align: center;
         }
 
         /* Menu Bar Container */
@@ -109,9 +100,11 @@
 
         /* Image Slideshow */
         .slideshow-container {
-            max-width: 100%;
+            max-width: 80%; /* Reduced size */
+            margin: 2rem auto;
             position: relative;
-            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         .mySlides {
@@ -121,6 +114,7 @@
         .slide-images {
             width: 100%;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .slideshow-container .prev, .slideshow-container .next {
@@ -245,6 +239,10 @@
             #search-bar {
                 width: 100%;
             }
+
+            .slideshow-container {
+                width: 100%; /* Full width on smaller screens */
+            }
         }
     </style>
 </head>
@@ -327,7 +325,6 @@
 
         <section id="popular">
             <h2>Popular Posts</h2>
-            <!-- Example of a blog post snippet -->
             <article class="post">
                 <h3>5 Must-See Places in Japan</h3>
                 <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
@@ -346,7 +343,6 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
-            <!-- Contact form goes here -->
         </section>
 
         <section id="resources">
