@@ -26,39 +26,97 @@
             font-family: 'Brush Script MT', cursive;
         }
 
-        /* Main Section */
+        /* Navigation Bar */
+        nav {
+            background-color: #F8AFA6; /* Cherry Blossom Pink */
+            padding: 1rem 0;
+            border-top: 5px solid #3E4A5A;
+            border-bottom: 5px solid #3E4A5A;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3E4A5A; /* Dark Indigo */
+        }
+
+        /* Main Content */
         main {
             padding: 2rem 0;
         }
 
-        /* Profile Section */
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Team Member Profiles */
         .team-profiles {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
-            gap: 2rem;
         }
 
         .profile {
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            padding: 1.5rem;
-            width: 250px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 2rem;
             text-align: center;
+            width: 250px;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .profile img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
             border-radius: 50%;
             margin-bottom: 1rem;
         }
 
         .profile h3 {
-            color: #3E4A5A;
             font-size: 1.5rem;
+            color: #3E4A5A;
         }
 
         .profile p {
@@ -66,106 +124,120 @@
             color: #555;
         }
 
-        /* Blog Existence Box */
+        /* Boxes for Blog Purpose and Japanese Culture Importance */
         .info-box {
-            background-color: #F8AFA6;
-            color: white;
-            border-radius: 8px;
+            background-color: #fff;
             padding: 2rem;
             margin-bottom: 2rem;
-            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .info-box h2 {
-            color: #3E4A5A;
-            font-size: 2rem;
+        .info-box h3 {
+            font-size: 1.8rem;
+            color: #F8AFA6;
             margin-bottom: 1rem;
         }
 
         .info-box p {
             font-size: 1.1rem;
-            color: #fff;
+            color: #333;
         }
 
-        /* Importance of Japanese Culture Box */
-        .importance-box {
-            background-color: #3E4A5A;
-            color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .importance-box h2 {
-            color: #F8AFA6;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .importance-box p {
-            font-size: 1.1rem;
-            color: #fff;
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #3E4A5A;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-profiles {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile {
+                width: 80%;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#popular">Popular Posts</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <main>
-        <!-- About Us Section -->
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a group of passionate individuals who are deeply interested in Japanese culture. Through this blog, we aim to share our insights, discoveries, and experiences in exploring the rich traditions, modern advancements, and timeless beauty of Japan.</p>
+        </section>
+
+        <!-- Team Profiles -->
         <section>
-            <h1>About Us</h1>
-            <p>We are passionate individuals from diverse backgrounds, united by our love for Japanese culture. Our goal is to share the beauty of Japan's traditions, history, and modern lifestyle through this blog.</p>
+            <h2>Meet Our Team</h2>
+            <div class="team-profiles">
+                <!-- Team Member 1 -->
+                <div class="profile">
+                    <img src="team-member1.jpg" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>John is our lead content creator and a Japanese language enthusiast. He's been to Japan multiple times and loves sharing his knowledge about its history.</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="profile">
+                    <img src="team-member2.jpg" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Jane is an expert in Japanese food and drink. Her passion for Japanese cuisine led her to start a food blog, which later turned into a bigger project to share with the world.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="profile">
+                    <img src="team-member3.jpg" alt="Team Member 3">
+                    <h3>Emily Lee</h3>
+                    <p>Emily is our cultural specialist. With a degree in Asian Studies, she writes extensively on Japan's cultural heritage and traditional practices.</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="profile">
+                    <img src="team-member4.jpg" alt="Team Member 4">
+                    <h3>Michael Chen</h3>
+                    <p>Michael is a travel expert who has explored Japan from the bustling cities to the tranquil countryside. His travel tips help visitors experience Japan like a local.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Why the Blog Exists Section -->
-        <div class="info-box">
-            <h2>Why This Blog Exists</h2>
-            <p>This blog was created to bridge the gap between people and Japanese culture. We wanted to make the beauty of Japan's rich traditions, art forms, cuisine, and language accessible to everyone. We believe that understanding Japan’s past and present can offer valuable insights into our world today.</p>
-        </div>
-
-        <!-- Importance of Japanese Culture Section -->
-        <div class="importance-box">
-            <h2>Why Japanese Culture is Important</h2>
-            <p>Japanese culture offers an intricate blend of ancient practices and modern innovations. By appreciating its art, language, and customs, we can gain a deeper understanding of human creativity, discipline, and harmony. Japanese culture teaches us the value of respect, mindfulness, and the beauty of simplicity.</p>
-        </div>
-
-        <!-- Team Profiles Section -->
-        <section class="team-profiles">
-            <div class="profile">
-                <img src="team-member1.jpg" alt="Team Member 1">
-                <h3>John Doe</h3>
-                <p>John is a travel enthusiast who has lived in Japan for over 5 years. His deep understanding of Japanese traditions and language makes him the perfect guide for exploring the cultural nuances of Japan.</p>
-            </div>
-            <div class="profile">
-                <img src="team-member2.jpg" alt="Team Member 2">
-                <h3>Jane Smith</h3>
-                <p>Jane is a cultural historian who specializes in traditional Japanese arts. She brings a wealth of knowledge on Japan’s ancient practices and their evolution in modern society.</p>
-            </div>
-            <div class="profile">
-                <img src="team-member3.jpg" alt="Team Member 3">
-                <h3>David Lee</h3>
-                <p>David is a food expert and photographer, passionate about documenting the diverse and delicious Japanese cuisine. He loves sharing recipes and food stories from his experiences in Japan.</p>
-            </div>
-            <div class="profile">
-                <img src="team-member4.jpg" alt="Team Member 4">
-                <h3>Maria Garcia</h3>
-                <p>Maria is an artist with a love for Japanese calligraphy and visual arts. She brings an artistic touch to the blog, highlighting the beauty of Japan's visual culture and traditional crafts.</p>
+        <!-- Why the Blog Exists -->
+        <section>
+            <div class="info-box">
+                <h3>Why This Blog Exists</h3>
+                <p>This blog was created out of a deep love for Japan's rich and diverse culture. We wanted to create a platform where people from all over the world could learn more about Japanese traditions, festivals, art, food, language, and much more. Through this blog, we aim to bridge the gap between cultures and foster a greater understanding of the beauty of Japan.</p>
             </div>
         </section>
+
+        <!-- Importance of Japanese Culture -->
+        <section>
+            <div class="info-box">
+                <h3>Why Japanese Culture is Important</h3>
+                <p>Japanese culture is known for its harmony, respect, and deep-rooted traditions. It has greatly influenced art, technology, and design worldwide. Understanding Japan's cultural heritage provides valuable insights into the country's values, philosophies, and the unique way of life that has existed for centuries. From tea ceremonies to cutting-edge technology, Japan offers lessons in mindfulness, beauty, and innovation.</p>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
