@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movie Blog - The Magnificent Movie</title>
+    <title>The Magnificent Movie</title>
     <style>
         /* General Reset */
         * {
@@ -15,44 +15,57 @@
 
         /* Body and Typography */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Georgia', serif; /* Serif for content */
             line-height: 1.6;
             background-color: #fff;
             color: #333;
-            padding: 20px;
-            border: 15px solid gray; /* Thicker gray border around the page */
+            border: 15px solid #ccc; /* Thicker gray border */
             border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2, h3 {
-            font-family: 'Georgia', serif;
+            font-family: 'Brush Script MT', cursive; /* Brush-style font for headers */
         }
 
-        /* Title Above the Nav Bar */
-        .page-title {
-            background-color: #4A90E2; /* Blue background */
+        /* Fancy Title Animation and Background */
+        .site-title-container {
+            background-color: #3E4A5A; /* Blue Box */
+            padding: 30px 0;
             text-align: center;
-            padding: 2rem 0;
-            color: white;
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        /* Subheading below the main title */
-        .subheading {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #333;
             margin-bottom: 2rem;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
         }
 
-        /* Navigation Bar */
+        .site-title {
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: white;
+            animation: titleAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes titleAnimation {
+            0% {
+                transform: scale(1);
+                color: #F8AFA6; /* Cherry blossom pink */
+            }
+            50% {
+                transform: scale(1.1);
+                color: #F8AFA6;
+            }
+            100% {
+                transform: scale(1);
+                color: #F8AFA6;
+            }
+        }
+
+        /* Menu Bar Container */
         nav {
-            background-color: #F8AFA6;
+            background-color: #F8AFA6; /* Cherry Blossom Pink */
             padding: 1rem 0;
-            border-top: 5px solid #3E4A5A; /* Accent color */
+            border-top: 5px solid #3E4A5A;
             border-bottom: 5px solid #3E4A5A;
         }
 
@@ -71,7 +84,7 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
             position: relative;
         }
 
@@ -83,7 +96,7 @@
         }
 
         nav ul li a:hover {
-            color: #3E4A5A; /* Accent color */
+            color: #3E4A5A; /* Dark Indigo */
         }
 
         /* Main Content */
@@ -102,7 +115,7 @@
 
         .container-box h2 {
             font-size: 2rem;
-            color: #333;
+            color: #3E4A5A;
             margin-bottom: 1rem;
         }
 
@@ -127,11 +140,10 @@
 
         /* Footer Section */
         footer {
-            background-color: #333;
+            background-color: #3E4A5A;
             color: white;
             padding: 1rem 0;
             text-align: center;
-            margin-top: 2rem;
         }
 
         /* Responsive Design */
@@ -148,17 +160,14 @@
 </head>
 <body>
 
-    <!-- Title Above the Nav Bar -->
-    <div class="page-title">
-        <h1>The Magnificent Movie</h1>
-    </div>
+    <!-- Header Section -->
+    <header>
+        <div class="site-title-container">
+            <h1 class="site-title">The Magnificent Movie</h1>
+        </div>
+    </header>
 
-    <!-- Subheading below the main title -->
-    <div class="subheading">
-        <h2>An In-Depth Look at One of the Most Stunning Films of the Year</h2>
-    </div>
-
-    <!-- Navigation Bar -->
+    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -173,6 +182,10 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Subheading below the main title -->
+        <div class="subheading">
+            <h2>An In-Depth Look at One of the Most Stunning Films of the Year</h2>
+        </div>
 
         <!-- Container 1 - Blue Background -->
         <section id="container1" class="blue-background">
@@ -210,9 +223,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Movie Blog. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2025 The Magnificent Movie. All Rights Reserved.</p>
     </footer>
 
 </body>
