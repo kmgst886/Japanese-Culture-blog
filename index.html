@@ -84,7 +84,6 @@
 
         nav ul li {
             margin: 0 15px;
-            position: relative;
         }
 
         nav ul li a {
@@ -96,38 +95,6 @@
 
         nav ul li a:hover {
             color: #3E4A5A; /* Dark Indigo */
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #F8AFA6;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            min-width: 180px;
-        }
-
-        nav ul li:hover .dropdown {
-            display: block;
-        }
-
-        .dropdown a {
-            color: #3E4A5A;
-            font-size: 1rem;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        .dropdown a:hover {
-            background-color: #3E4A5A;
-            color: white;
         }
 
         #search-bar {
@@ -144,7 +111,6 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            height: 300px; /* Reduced height for the slideshow */
         }
 
         .mySlides {
@@ -153,8 +119,6 @@
 
         .slide-images {
             width: 100%;
-            height: 100%; /* Make images take up the full container height */
-            object-fit: cover; /* Ensure images fill the container without distortion */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
@@ -208,6 +172,50 @@
             margin-bottom: 1.5rem;
         }
 
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .category {
+            background-color: #fff;
+            padding: 1.5rem;
+            flex: 1 1 calc(33% - 1rem);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h3 {
+            font-size: 1.5rem;
+            color: #F8AFA6;
+            margin-bottom: 0.5rem;
+        }
+
+        .category p {
+            font-size: 1rem;
+        }
+
+        /* Post Snippets */
+        .post {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h3 {
+            font-size: 1.8rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        .post p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
         /* Footer Section */
         footer {
             background-color: #3E4A5A;
@@ -218,6 +226,14 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .categories {
+                flex-direction: column;
+            }
+
+            .category {
+                flex: 1 1 100%;
+            }
+
             nav ul {
                 flex-direction: column;
             }
@@ -250,17 +266,7 @@
         <div class="container">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Categories</a>
-                    <div class="dropdown">
-                        <a href="#">Traditional Culture</a>
-                        <a href="#">Modern Japan</a>
-                        <a href="#">Travel</a>
-                        <a href="#">Food & Drink</a>
-                        <a href="#">Language Tips</a>
-                        <a href="#">Festivals & Events</a>
-                    </div>
-                </li>
+                <li><a href="#categories">Categories</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#resources">Resources</a></li>
@@ -291,66 +297,95 @@
         <section id="home">
             <h2>Welcome to the World of Japanese Culture</h2>
             <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
-        </section>
+ChatGPT said:
+    </section>
 
-        <section id="popular">
-            <h2>Popular Posts</h2>
-            <article class="post">
-                <h3>5 Must-See Places in Japan</h3>
-                <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
-            </article>
-            <article class="post">
-                <h3>Understanding Japanese Tea Ceremony</h3>
-                <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
-            </article>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
-        </section>
-
-        <section id="resources">
-            <h2>Useful Resources</h2>
-            <ul>
-                <li><a href="#">Learn Japanese Language</a></li>
-                <li><a href="#">Top Travel Destinations in Japan</a></li>
-                <li><a href="#">Japanese Cultural Podcasts</a></li>
-                <li><a href="#">Guide to Japanese Festivals</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+    <section id="categories">
+        <h2>Our Categories</h2>
+        <div class="categories">
+            <div class="category">
+                <h3>Traditional Culture</h3>
+                <p>Explore the deep traditions and cultural practices that have been passed down for generations.</p>
+            </div>
+            <div class="category">
+                <h3>Modern Japan</h3>
+                <p>See how Japan blends its ancient traditions with cutting-edge technology in today's society.</p>
+            </div>
+            <div class="category">
+                <h3>Travel</h3>
+                <p>Discover Japan's scenic landscapes, ancient temples, and bustling cities.</p>
+            </div>
+            <div class="category">
+                <h3>Food & Drink</h3>
+                <p>Savor the tastes of sushi, ramen, sake, and other delicious Japanese dishes.</p>
+            </div>
+            <div class="category">
+                <h3>Language Tips</h3>
+                <p>Learn Japanese language basics to help you navigate the country with ease.</p>
+            </div>
+            <div class="category">
+                <h3>Festivals & Events</h3>
+                <p>Immerse yourself in Japan's annual festivals and vibrant cultural celebrations.</p>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
+    <section id="popular">
+        <h2>Popular Posts</h2>
+        <article class="post">
+            <h3>5 Must-See Places in Japan</h3>
+            <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
+        </article>
+        <article class="post">
+            <h3>Understanding Japanese Tea Ceremony</h3>
+            <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
+        </article>
+    </section>
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 4000); // Change image every 4 seconds
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Useful Resources</h2>
+        <ul>
+            <li><a href="#">Learn Japanese Language</a></li>
+            <li><a href="#">Top Travel Destinations in Japan</a></li>
+            <li><a href="#">Japanese Cultural Podcasts</a></li>
+            <li><a href="#">Guide to Japanese Festivals</a></li>
+        </ul>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
         }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-    </script>
-</body>
-</html>
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+</script>
