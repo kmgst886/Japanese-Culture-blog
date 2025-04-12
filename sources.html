@@ -67,6 +67,45 @@
             color: #3E4A5A;
         }
 
+        /* Title Animation */
+        .title-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .animated-title {
+            font-size: 3rem;
+            color: #3E4A5A;
+            font-family: 'Brush Script MT', cursive;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animated-title span {
+            position: absolute;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #3E4A5A;
+            width: 0;
+            animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
         /* Main Content */
         main {
             padding: 2rem 0;
@@ -159,6 +198,11 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Animated Title -->
+    <div class="title-container">
+        <h1 class="animated-title"><span>Our Trusted Sources and References</span></h1>
+    </div>
 
     <!-- Main Content -->
     <main>
