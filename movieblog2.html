@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movie Blog</title>
+    <title>"The Fast and Furious - Tokyo Drift"</title>
     <style>
         /* General Reset */
         * {
@@ -15,23 +15,58 @@
 
         /* Body and Typography */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Georgia', serif; /* Serif for content */
             line-height: 1.6;
             background-color: #fff;
             color: #333;
+            border: 15px solid #ccc; /* Thicker gray border */
+            border-radius: 15px;
             padding: 20px;
+            margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2, h3 {
-            font-family: 'Georgia', serif;
+            font-family: 'Brush Script MT', cursive; /* Brush-style font for headers */
         }
 
-        /* Navigation Bar */
+        /* Fancy Title Animation and Background */
+        .site-title-container {
+            background-color: #3E4A5A; /* Blue Box */
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+        }
+
+        .site-title {
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: white;
+            animation: titleAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes titleAnimation {
+            0% {
+                transform: scale(1);
+                color: #F8AFA6; /* Cherry blossom pink */
+            }
+            50% {
+                transform: scale(1.1);
+                color: #F8AFA6;
+            }
+            100% {
+                transform: scale(1);
+                color: #F8AFA6;
+            }
+        }
+
+        /* Menu Bar Container */
         nav {
-            background-color: #333;
+            background-color: #F8AFA6; /* Cherry Blossom Pink */
             padding: 1rem 0;
-            border-top: 5px solid #F8AFA6; /* Accent color */
-            border-bottom: 5px solid #F8AFA6;
+            border-top: 5px solid #3E4A5A;
+            border-bottom: 5px solid #3E4A5A;
         }
 
         nav .container {
@@ -49,7 +84,7 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
             position: relative;
         }
 
@@ -61,7 +96,7 @@
         }
 
         nav ul li a:hover {
-            color: #F8AFA6; /* Accent color */
+            color: #3E4A5A; /* Dark Indigo */
         }
 
         /* Main Content */
@@ -69,78 +104,70 @@
             padding: 2rem 0;
         }
 
-        /* Section Boxes */
-        section {
-            margin: 2rem 0;
+        /* Container Boxes */
+        .container-box {
             padding: 2rem;
-            background-color: #f8f8f8;
+            margin-bottom: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center titles in containers */
         }
 
-        h2 {
+        .container-box h2 {
             font-size: 2rem;
-            color: #333;
+            color: #3E4A5A;
             margin-bottom: 1rem;
         }
 
-        p {
+        .container-box p {
             font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Picture Boxes */
-        .movie-boxes {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .movie-box {
-            background-color: #fff;
-            width: 280px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .movie-box img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .movie-box .movie-info {
-            padding: 1rem;
-        }
-
-        .movie-box h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .movie-box p {
-            font-size: 1rem;
             color: #555;
+        }
+
+        /* Background colors for some containers */
+        .blue-background {
+            background-color: #F0F8FF;
+        }
+
+        .green-background {
+            background-color: #D0F0C0;
+        }
+
+        .yellow-background {
+            background-color: #FFF8DC;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .movie-boxes {
+            nav ul {
                 flex-direction: column;
-                align-items: center;
             }
-            .movie-box {
-                width: 90%;
+
+            nav ul li {
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header Section -->
+    <header>
+        <div class="site-title-container">
+            <h1 class="site-title">"Spirited Away" </h1>
+        </div>
+    </header>
+
+    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -155,117 +182,40 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Subheading below the main title -->
+        <div class="subheading">
+            <h2>By: Vanessa Comulada</h2>
+        </div>
 
-        <!-- Latest Movie Reviews -->
-        <section id="reviews">
-            <h2>Latest Movie Reviews</h2>
-            <div class="movie-boxes">
-                <!-- Movie 1 -->
-                <div class="movie-box">
-                    <img src="movie1.jpg" alt="Movie 1 Poster">
-                    <div class="movie-info">
-                        <h3>Movie Title 1</h3>
-                        <p>Brief review of the movie. A must-watch for action lovers!</p>
-                    </div>
-                </div>
-
-                <!-- Movie 2 -->
-                <div class="movie-box">
-                    <img src="movie2.jpg" alt="Movie 2 Poster">
-                    <div class="movie-info">
-                        <h3>Movie Title 2</h3>
-                        <p>A captivating story with deep character development. Highly recommended!</p>
-                    </div>
-                </div>
-
-                <!-- Movie 3 -->
-                <div class="movie-box">
-                    <img src="movie3.jpg" alt="Movie 3 Poster">
-                    <div class="movie-info">
-                        <h3>Movie Title 3</h3>
-                        <p>An emotional journey with stunning visuals. A perfect drama.</p>
-                    </div>
-                </div>
+        <!-- Container 1 - Blue Background -->
+        <section id="container1" class="blue-background">
+            <div class="container-box">
+                <h2>Character Development</h2>
+                <p>In "The Magnificent Movie", the depth of character development is one of its strongest aspects. Each character is thoughtfully crafted, showing growth and transformation throughout the narrative. From the protagonist’s struggle with inner conflict to the antagonist’s motives that challenge the hero, every character plays a crucial role in driving the plot forward.</p>
             </div>
         </section>
 
-        <!-- Movie News -->
-        <section id="news">
-            <h2>Latest Movie News</h2>
-            <div class="movie-boxes">
-                <!-- News 1 -->
-                <div class="movie-box">
-                    <img src="news1.jpg" alt="News Image 1">
-                    <div class="movie-info">
-                        <h3>Upcoming Movie Releases</h3>
-                        <p>Find out what's coming to theaters soon. Get the scoop on upcoming releases.</p>
-                    </div>
-                </div>
-
-                <!-- News 2 -->
-                <div class="movie-box">
-                    <img src="news2.jpg" alt="News Image 2">
-                    <div class="movie-info">
-                        <h3>Exclusive Interview</h3>
-                        <p>We sat down with the director of 'Movie Title 3' for an in-depth interview.</p>
-                    </div>
-                </div>
-
-                <!-- News 3 -->
-                <div class="movie-box">
-                    <img src="news3.jpg" alt="News Image 3">
-                    <div class="movie-info">
-                        <h3>Box Office Breakdown</h3>
-                        <p>Check out the latest box office numbers and which films are dominating the charts.</p>
-                    </div>
-                </div>
+        <!-- Container 2 - Green Background -->
+        <section id="container2" class="green-background">
+            <div class="container-box">
+                <h2>Visual Aesthetics</h2>
+                <p>The film’s visual design is absolutely stunning, showcasing breathtaking landscapes, intricate set designs, and breathtaking cinematography. The use of color, light, and shadow creates an atmosphere that amplifies the movie's emotional undertones and heightens the viewer's experience. The stunning visuals are a masterpiece that blends art and storytelling seamlessly.</p>
             </div>
         </section>
 
-        <!-- Featured Movie of the Week -->
-        <section id="featured">
-            <h2>Featured Movie of the Week</h2>
-            <div class="movie-boxes">
-                <div class="movie-box">
-                    <img src="featured-movie.jpg" alt="Featured Movie Poster">
-                    <div class="movie-info">
-                        <h3>Featured Movie Title</h3>
-                        <p>This week's featured movie is a masterpiece of cinematography and storytelling. A must-watch for fans of the genre!</p>
-                    </div>
-                </div>
+        <!-- Container 3 - Yellow Background -->
+        <section id="container3" class="yellow-background">
+            <div class="container-box">
+                <h2>Plot and Storyline</h2>
+                <p>The plot of "The Magnificent Movie" is intricately woven, with each twist and turn adding to the overall suspense and mystery. The storyline explores complex themes of love, betrayal, and redemption. With cleverly placed foreshadowing and unpredictable events, the movie keeps the audience on the edge of their seats, wondering what will happen next.</p>
             </div>
         </section>
 
-        <!-- Movie Recommendations -->
-        <section id="recommendations">
-            <h2>Movie Recommendations</h2>
-            <div class="movie-boxes">
-                <!-- Recommendation 1 -->
-                <div class="movie-box">
-                    <img src="recommendation1.jpg" alt="Recommendation 1">
-                    <div class="movie-info">
-                        <h3>Recommendation 1</h3>
-                        <p>Explore this under-the-radar gem with fantastic performances and an engaging plot.</p>
-                    </div>
-                </div>
-
-                <!-- Recommendation 2 -->
-                <div class="movie-box">
-                    <img src="recommendation2.jpg" alt="Recommendation 2">
-                    <div class="movie-info">
-                        <h3>Recommendation 2</h3>
-                        <p>A heartwarming story of love and friendship. Definitely worth your time!</p>
-                    </div>
-                </div>
-
-                <!-- Recommendation 3 -->
-                <div class="movie-box">
-                    <img src="recommendation3.jpg" alt="Recommendation 3">
-                    <div class="movie-info">
-                        <h3>Recommendation 3</h3>
-                        <p>This classic film has stood the test of time. A must-see for every movie lover.</p>
-                    </div>
-                </div>
+        <!-- Container 4 - No Background Color -->
+        <section id="container4">
+            <div class="container-box">
+                <h2>Music and Soundtrack</h2>
+                <p>The movie’s soundtrack is powerful, with music that perfectly complements the story’s emotional highs and lows. From dramatic orchestral scores during intense action sequences to subtle melodies during quieter moments, the music creates an immersive experience that resonates with the audience. The film’s sound design helps convey the themes and emotions more profoundly, enhancing the movie's impact.</p>
             </div>
         </section>
 
@@ -273,9 +223,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Movie Blog. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2025 The Magnificent Movie. All Rights Reserved.</p>
     </footer>
 
 </body>
