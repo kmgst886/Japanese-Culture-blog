@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sources - Explore Japanese Culture</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Typography */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            border: 15px solid #ccc;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        /* Menu Bar Container */
+        nav {
+            background-color: #F8AFA6;
+            padding: 1rem 0;
+            border-top: 5px solid #3E4A5A;
+            border-bottom: 5px solid #3E4A5A;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3E4A5A;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        .sources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .source {
+            background-color: #fff;
+            padding: 1.5rem;
+            flex: 1 1 calc(33% - 1rem);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .source:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .source h3 {
+            font-size: 1.5rem;
+            color: #F8AFA6;
+            margin-bottom: 0.5rem;
+        }
+
+        .source p {
+            font-size: 1rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sources {
+                flex-direction: column;
+            }
+
+            .source {
+                flex: 1 1 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Bar Container -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="popular.html">Popular Posts</a></li>
+                <li><a href="sources.html">Sources</a></li> <!-- New link to Sources Page -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Sources & References</h2>
+            <p>Below you will find a list of sources and references used throughout the blog. These resources offer valuable insights into the diverse aspects of Japanese culture, from historical landmarks to modern innovations.</p>
+
+            <div class="sources">
+                <div class="source">
+                    <h3>Japan National Tourism Organization (JNTO)</h3>
+                    <p>Explore official guides, travel tips, and cultural insights about Japan's landmarks, festivals, and more.</p>
+                    <a href="https://www.japan.travel/en/" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="source">
+                    <h3>Tokyo Review</h3>
+                    <p>Get detailed information on Tokyo's history, contemporary culture, and social trends.</p>
+                    <a href="https://www.tokyoreview.net/" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="source">
+                    <h3>Japanese Cultural Society</h3>
+                    <p>Learn about traditional Japanese arts, festivals, and ceremonies through their extensive resources.</p>
+                    <a href="http://www.japansociety.org/" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="source">
+                    <h3>Japan Times</h3>
+                    <p>Stay updated on current events, politics, and cultural issues affecting Japan today.</p>
+                    <a href="https://www.japantimes.co.jp/" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="source">
+                    <h3>NHK World Japan</h3>
+                    <p>Explore Japan's international broadcaster with articles and videos on cultural events and lifestyle in Japan.</p>
+                    <a href="https://www.nhk.or.jp/nhkworld/" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="source">
+                    <h3>Japanese Food Guide</h3>
+                    <p>Discover authentic Japanese recipes, cultural dishes, and food traditions from across the country.</p>
+                    <a href="https://www.japanesekitchen.com/" target="_blank">Visit Website</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
