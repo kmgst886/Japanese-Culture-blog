@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Blog</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Typography */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            border-top: 5px solid #F8AFA6; /* Accent color */
+            border-bottom: 5px solid #F8AFA6;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #F8AFA6; /* Accent color */
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        /* Section Boxes */
+        section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Picture Boxes */
+        .movie-boxes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .movie-box {
+            background-color: #fff;
+            width: 280px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .movie-box .movie-info {
+            padding: 1rem;
+        }
+
+        .movie-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .movie-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+            .movie-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Latest Movie Reviews -->
+        <section id="reviews">
+            <h2>Latest Movie Reviews</h2>
+            <div class="movie-boxes">
+                <!-- Movie 1 -->
+                <div class="movie-box">
+                    <img src="movie1.jpg" alt="Movie 1 Poster">
+                    <div class="movie-info">
+                        <h3>Movie Title 1</h3>
+                        <p>Brief review of the movie. A must-watch for action lovers!</p>
+                    </div>
+                </div>
+
+                <!-- Movie 2 -->
+                <div class="movie-box">
+                    <img src="movie2.jpg" alt="Movie 2 Poster">
+                    <div class="movie-info">
+                        <h3>Movie Title 2</h3>
+                        <p>A captivating story with deep character development. Highly recommended!</p>
+                    </div>
+                </div>
+
+                <!-- Movie 3 -->
+                <div class="movie-box">
+                    <img src="movie3.jpg" alt="Movie 3 Poster">
+                    <div class="movie-info">
+                        <h3>Movie Title 3</h3>
+                        <p>An emotional journey with stunning visuals. A perfect drama.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movie News -->
+        <section id="news">
+            <h2>Latest Movie News</h2>
+            <div class="movie-boxes">
+                <!-- News 1 -->
+                <div class="movie-box">
+                    <img src="news1.jpg" alt="News Image 1">
+                    <div class="movie-info">
+                        <h3>Upcoming Movie Releases</h3>
+                        <p>Find out what's coming to theaters soon. Get the scoop on upcoming releases.</p>
+                    </div>
+                </div>
+
+                <!-- News 2 -->
+                <div class="movie-box">
+                    <img src="news2.jpg" alt="News Image 2">
+                    <div class="movie-info">
+                        <h3>Exclusive Interview</h3>
+                        <p>We sat down with the director of 'Movie Title 3' for an in-depth interview.</p>
+                    </div>
+                </div>
+
+                <!-- News 3 -->
+                <div class="movie-box">
+                    <img src="news3.jpg" alt="News Image 3">
+                    <div class="movie-info">
+                        <h3>Box Office Breakdown</h3>
+                        <p>Check out the latest box office numbers and which films are dominating the charts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Movie of the Week -->
+        <section id="featured">
+            <h2>Featured Movie of the Week</h2>
+            <div class="movie-boxes">
+                <div class="movie-box">
+                    <img src="featured-movie.jpg" alt="Featured Movie Poster">
+                    <div class="movie-info">
+                        <h3>Featured Movie Title</h3>
+                        <p>This week's featured movie is a masterpiece of cinematography and storytelling. A must-watch for fans of the genre!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movie Recommendations -->
+        <section id="recommendations">
+            <h2>Movie Recommendations</h2>
+            <div class="movie-boxes">
+                <!-- Recommendation 1 -->
+                <div class="movie-box">
+                    <img src="recommendation1.jpg" alt="Recommendation 1">
+                    <div class="movie-info">
+                        <h3>Recommendation 1</h3>
+                        <p>Explore this under-the-radar gem with fantastic performances and an engaging plot.</p>
+                    </div>
+                </div>
+
+                <!-- Recommendation 2 -->
+                <div class="movie-box">
+                    <img src="recommendation2.jpg" alt="Recommendation 2">
+                    <div class="movie-info">
+                        <h3>Recommendation 2</h3>
+                        <p>A heartwarming story of love and friendship. Definitely worth your time!</p>
+                    </div>
+                </div>
+
+                <!-- Recommendation 3 -->
+                <div class="movie-box">
+                    <img src="recommendation3.jpg" alt="Recommendation 3">
+                    <div class="movie-info">
+                        <h3>Recommendation 3</h3>
+                        <p>This classic film has stood the test of time. A must-see for every movie lover.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
