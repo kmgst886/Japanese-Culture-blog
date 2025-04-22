@@ -1,194 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Explore Japanese Culture</title>
-  <style>
-    /* ... [existing styles remain unchanged above this point] ... */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Explore Japanese Culture</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .mission-section {
-      background-color: #FFF0F5; /* Soft pink */
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 2rem;
-    }
+        /* Body and Typography */
+        body {
+            font-family: 'Georgia', serif; /* Serif for content */
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            border: 15px solid #ccc; /* Thicker gray border */
+            border-radius: 15px;
+            padding: 20px;
+            margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
 
-    .mission-section h2 {
-      color: #8B0000;
-    }
+        h1, h2, h3 {
+            font-family: 'Brush Script MT', cursive; /* Brush-style font for headers */
+        }
 
-    .mission-section p {
-      color: #333;
-    }
+        /* Fancy Title Animation and Background */
+        .site-title-container {
+            background-color: #3E4A5A; /* Blue Box */
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+        }
 
-    /* [slide image styles are already included in your CSS] */
-  </style>
+        .site-title {
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: white;
+            animation: titleAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes titleAnimation {
+            0% {
+                transform: scale(1);
+                color: #F8AFA6; /* Cherry blossom pink */
+            }
+            50% {
+                transform: scale(1.1);
+                color: #F8AFA6;
+            }
+            100% {
+                transform: scale(1);
+                color: #F8AFA6;
+            }
+        }
+
+        /* Menu Bar Container */
+        nav {
+            background-color: #F8AFA6; /* Cherry Blossom Pink */
+            padding: 1rem 0;
+            border-top: 5px solid #3E4A5A;
+            border-bottom: 5px solid #3E4A5A;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3E4A5A; /* Dark Indigo */
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #F8AFA6;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #3E4A5A; /* Dark Indigo */
+        }
+
+        #search-bar {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        /* Image Slideshow */
+        .slideshow-container {
+            max-width: 80%; /* Reduced size */
+            margin: 2rem auto;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px; /* Set a fixed height for the slideshow container */
+        }
+
+        .mySlides {
+            display: none;
+            height: 100%; /* Ensure each slide takes up the full height of the container */
+        }
+
+        .slide-images {
+            width: 100%;
+            height: 100%; /* Make sure the images fill the container */
+            object-fit: cover; /* Ensures the images cover the container without distortion */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slideshow-container .prev, .slideshow-container .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .slideshow-container .prev:hover, .slideshow-container .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .category {
+            background-color: #fff;
+            padding: 1.5rem;
+            flex: 1 1 calc(33% - 1rem);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h3 {
+            font-size: 1.5rem;
+            color: #F8AFA6;
+            margin-bottom: 0.5rem;
+        }
+
+        .category p {
+            font-size: 1rem;
+        }
+
+        /* Post Snippets */
+        .post {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h3 {
+            font-size: 1.8rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+        }
+
+        .post p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .categories {
+                flex-direction: column;
+            }
+
+            .category {
+                flex: 1 1 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #search-bar {
+                width: 100%;
+            }
+
+            .slideshow-container {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <div class="site-title-container">
-      <h1 class="site-title">Explore Japanese Culture</h1>
-    </div>
-  </header>
+    <!-- Header Section -->
+    <header>
+        <div class="site-title-container">
+            <h1 class="site-title">Explore Japanese Culture</h1>
+        </div>
+    </header>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="categories.html">Our Movie Blogs</a></li>
-        <li><a href="about.html">About</a>
-          <div class="dropdown">
-            <div class="dropdown-content">
-              <a href="#">History</a>
-              <a href="#">Culture</a>
-              <a href="#">Traditions</a>
-              <a href="#">Language</a>
+    <!-- Menu Bar Container -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="categories.html">Our Movie Blogs</a></li>
+                <li><a href="about.html">About</a>
+                    <div class="dropdown">
+                        <div class="dropdown-content">
+                            <a href="#">History</a>
+                            <a href="#">Culture</a>
+                            <a href="#">Traditions</a>
+                            <a href="#">Language</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#contact.html">Contact</a></li>
+                <li><a href="sources.html">Sources</a></li>
+                <li><a href="#popular">Popular Posts</a></li>
+            </ul>
+            <input type="text" id="search-bar" placeholder="Search...">
+        </div>
+    </nav>
+
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="japaneseculture.jpeg" alt="Japanese Culture" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="japaneseculture1.jpeg" alt="Japanese Culture 1" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="japanesefestival.jpeg" alt="Japanese Festival" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="japanesefood1.jpeg" alt="Japanese Food" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="japaneselandscape1.jpeg" alt="Japanese Landscape 1" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="japaneselandscape2.jpeg" alt="Japanese Landscape 2" class="slide-images">
+        </div>
+        <div class="mySlides fade">
+            <img src="lanterns.jpeg" alt="Japanese Lanterns" class="slide-images">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <h2>Welcome to the World of Japanese Culture</h2>
+            <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
+        </section>
+
+        <section id="categories">
+            <h2>Our Movie Blogs</h2>
+            <div class="categories">
+                <div class="category">
+                    <h3>"Fast and Furious - Tokyo Drift"</h3>
+                    <p>Caption.</p>
+                </div>
+                <div class="category">
+                    <h3>"Spirited Away"</h3>
+                    <p>Caption.</p>
+                </div>
+                <div class="category">
+                    <h3>"Tampopo"</h3>
+                    <p>Caption.</p>
+                </div>
+                <div class="category">
+                    <h3>"Lost in Translation" </h3>
+                    <p>Caption </p>
+                </div>
+                <div class="category">
+                    <h3>Other</h3>
+                    <p>Caption</p>
+                </div>
+                <div class="category">
+                    <h3>Other</h3>
+                    <p>Caption.</p>
+                </div>
             </div>
-          </div>
-        </li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="sources.html">Sources</a></li>
-        <li><a href="#mission">Mission</a></li>
-      </ul>
-      <input type="text" id="search-bar" placeholder="Search...">
-    </div>
-  </nav>
+        </section>
 
-  <!-- Image Slideshow -->
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="japaneseculture.jpeg" alt="Japanese Culture" class="slide-images">
-    </div>
-    <div class="mySlides fade">
-      <img src="japaneseculture1.jpeg" alt="Japanese Culture 1" class="slide-images">
-    </div>
-    <div class="mySlides fade">
-      <img src="japanesefestival.jpeg" alt="Japanese Festival" class="slide-images">
-    </div>
-    <div class="mySlides fade">
-      <img src="japanesefood1.jpeg" alt="Japanese Food" class="slide-images">
-    </div>
-    <div class="mySlides fade">
-      <img src="japaneselandscape1.jpeg" alt="Japanese Landscape 1" class="slide-images">
-    </div>
-    <div class="mySlides fade">
-      <img src="japaneselandscape2.jpeg" alt="Japanese Landscape 2" class="slide-images">
-    </div>
-    <div class="mySlides fade">
-      <img src="lanterns.jpeg" alt="Japanese Lanterns" class="slide-images">
-    </div>
+        <section id="popular">
+            <h2>Popular Posts</h2>
+            <article class="post">
+                <h3>5 Must-See Places in Japan</h3>
+                <p>Discover the top destinations in Japan that offer a perfect blend of natural beauty and historical significance...</p>
+            </article>
+            <article class="post">
+                <h3>Understanding Japanese Tea Ceremony</h3>
+                <p>Explore the history and significance behind Japan's most iconic ritual, the tea ceremony...</p>
+            </article>
+        </section>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
+        </section>
 
-  <!-- Main Content -->
-  <main>
-    <section id="home">
-      <h2>Welcome to the World of Japanese Culture</h2>
-      <p>Discover the rich history, vibrant traditions, and unique art forms that make Japan such a fascinating country.</p>
-    </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
+        </section>
 
-    <section id="mission" class="mission-section">
-      <h2>Mission: The Way of Wa (Harmony)</h2>
-      <p>
-        This blog is dedicated to exploring the depth and beauty of Japanese culture—from the grace of the tea ceremony to the pulse of Tokyo's neon-lit streets. We aim to create a space that is both educational and visually inspiring for anyone curious about Japan.
-      </p>
-      <p>
-        Learning about Japanese culture opens doors to understanding not just customs and language, but also the values of harmony, respect, and mindfulness. Whether you're a traveler, a language learner, or a pop culture fan, engaging with this culture enriches your perspective and nurtures global empathy.
-      </p>
-    </section>
+        <section id="resources">
+            <h2>Useful Resources</h2>
+            <ul>
+                <li><a href="#">Learn Japanese Language</a></li>
+                <li><a href="#">Top Travel Destinations in Japan</a></li>
+                <li><a href="#">Japanese Cultural Podcasts</a></li>
+                <li><a href="#">Guide to Japanese Festivals</a></li>
+            </ul>
+        </section>
+    </main>
 
-    <section id="categories">
-      <h2>Our Movie Blogs</h2>
-      <div class="categories">
-        <div class="category" style="background-color:#FFE4E1;">
-          <h3>"Fast and Furious - Tokyo Drift"</h3>
-          <p>Experience the vibrant urban racing scene that captures Tokyo's nighttime energy.</p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
         </div>
-        <div class="category" style="background-color:#E6E6FA;">
-          <h3>"Spirited Away"</h3>
-          <p>A magical journey into the world of spirits, rooted in Japanese mythology and Shinto beliefs.</p>
-        </div>
-        <div class="category" style="background-color:#F0FFF0;">
-          <h3>"Tampopo"</h3>
-          <p>A delicious dive into Japanese ramen culture and quirky storytelling.</p>
-        </div>
-        <div class="category" style="background-color:#FFFACD;">
-          <h3>"Lost in Translation"</h3>
-          <p>A cinematic reflection on connection and culture clash in the heart of Tokyo.</p>
-        </div>
-        <div class="category" style="background-color:#F5F5DC;">
-          <h3>"Weathering With You"</h3>
-          <p>Blending romance and climate themes with Tokyo's magical realism.</p>
-        </div>
-        <div class="category" style="background-color:#F0F8FF;">
-          <h3>"Your Name"</h3>
-          <p>A tale of time, fate, and body-switching rooted in Japanese folklore.</p>
-        </div>
-      </div>
-    </section>
+    </footer>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We are a team of passionate individuals who seek to share the beauty of Japan's culture with the world. From traditional practices to modern innovations, we aim to create a deeper understanding of Japan through our blog.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>If you have any questions or inquiries, feel free to reach out to us through the contact form below.</p>
-    </section>
-
-    <section id="resources">
-      <h2>Useful Resources</h2>
-      <ul>
-        <li><a href="#">Learn Japanese Language</a></li>
-        <li><a href="#">Top Travel Destinations in Japan</a></li>
-        <li><a href="#">Japanese Cultural Podcasts</a></li>
-        <li><a href="#">Guide to Japanese Festivals</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Slideshow Script -->
-  <script>
+<script>
     let slideIndex = 0;
-    let slides = document.getElementsByClassName("mySlides");
+    showSlides();
 
     function showSlides() {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000);
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
     }
 
     function plusSlides(n) {
-      slideIndex += n;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      if (slideIndex < 1) { slideIndex = slides.length; }
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex - 1].style.display = "block";
+        showSlides(slideIndex += n);
     }
+</script>
 
-    showSlides();
-  </script>
 </body>
 </html>
