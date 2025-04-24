@@ -26,9 +26,36 @@
             font-family: 'Brush Script MT', cursive;
         }
 
+        /* Header Styling */
+        .site-title-container {
+            background-color: #3E4A5A;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .site-title {
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: white;
+            animation: titleAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes titleAnimation {
+            0%, 100% {
+                transform: scale(1);
+                color: #F8AFA6;
+            }
+            50% {
+                transform: scale(1.1);
+                color: #F8AFA6;
+            }
+        }
+
         /* Navigation Bar */
         nav {
-            background-color: #F8AFA6; /* Cherry Blossom Pink */
+            background-color: #F8AFA6;
             padding: 1rem 0;
             border-top: 5px solid #3E4A5A;
             border-bottom: 5px solid #3E4A5A;
@@ -61,7 +88,7 @@
         }
 
         nav ul li a:hover {
-            color: #3E4A5A; /* Dark Indigo */
+            color: #3E4A5A;
         }
 
         /* Main Content */
@@ -94,7 +121,7 @@
             justify-content: space-around;
             margin-bottom: 2rem;
             flex-wrap: wrap;
-            background-color: #3E4A5A; /* Blue background */
+            background-color: #3E4A5A;
             padding: 2rem;
             border-radius: 8px;
         }
@@ -147,6 +174,14 @@
             color: #333;
         }
 
+        /* Footer Section */
+        footer {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .team-profiles {
@@ -156,10 +191,25 @@
             .profile {
                 width: 80%;
             }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="site-title-container">
+            <h1 class="site-title">Explore Japanese Culture</h1>
+        </div>
+    </header>
 
     <!-- Navigation Bar -->
     <nav>
@@ -245,7 +295,7 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p></p>
+            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
         </div>
     </footer>
 
