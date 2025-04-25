@@ -43,22 +43,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
-        }
-
-        @keyframes titleAnimation {
-            0% {
-                transform: scale(1);
-                color: #F8AFA6; /* Cherry blossom pink */
-            }
-            50% {
-                transform: scale(1.1);
-                color: #F8AFA6;
-            }
-            100% {
-                transform: scale(1);
-                color: #F8AFA6;
-            }
         }
 
         /* Menu Bar Container */
@@ -106,20 +90,24 @@
         section {
             padding: 2rem;
             margin: 2rem 0;
-            background-color: #f8f8f8;
+            background-color: #3E4A5A; /* Making it the same as the header */
             border-radius: 8px;
+            color: white; /* Setting default text color to white for this section */
         }
 
-        h2 {
-            font-size: 2rem;
-            color: #3E4A5A;
-            margin-bottom: 1rem;
+        section h2 {
+            color: white; /* Ensuring the heading is white */
+        }
+
+        section p {
+            color: #f0f8ff; /* A very light color for the paragraph text */
         }
 
         .categories {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
+            margin-top: 1rem; /* Add some space above the categories */
         }
 
         .category {
@@ -230,14 +218,12 @@
 </head>
 <body>
 
-    <!-- Title Section -->
     <header>
         <div class="site-title-container">
             <h1 class="site-title">Our Movie Blogs</h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -250,7 +236,6 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
         <section>
             <h2>Explore Our Movie Blogs</h2>
@@ -275,7 +260,6 @@
                 </div>
         </section>
 
-        <!-- View our Blogs Button with Dropdown -->
         <section class="view-blogs-btn-container">
             <div class="dropdown">
                 <button>View our Blogs</button>
@@ -289,10 +273,8 @@
         </section>
     </main>
 
-     <!-- Footer Section -->
-<footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
+    <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
 
-    <!-- Navigation Links -->
     <div style="margin-bottom: 1rem;">
         <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Home</a> |
         <a href="categories.html" style="color: white; margin: 0 10px; text-decoration: none;">Our Movie Blogs</a> |
@@ -301,7 +283,6 @@
         <a href="sources.html" style="color: white; margin: 0 10px; text-decoration: none;">Sources</a> |
     </div>
 
-    <!-- Social Media Links -->
     <div style="margin-bottom: 1rem;">
         <a href="https://instagram.com" target="_blank" style="color: white; margin: 0 8px;">Instagram</a>
         <a href="https://twitter.com" target="_blank" style="color: white; margin: 0 8px;">Twitter</a>
@@ -309,24 +290,20 @@
         <a href="https://pinterest.com" target="_blank" style="color: white; margin: 0 8px;">Pinterest</a>
     </div>
 
-    <!-- Newsletter Signup Placeholder -->
     <div style="margin-bottom: 1rem;">
         📩 <em>Subscribe for updates on Japanese culture and media.</em>
     </div>
 
-    <!-- Mini Mission or Tagline -->
     <div style="margin-bottom: 1rem; font-style: italic;">
         Bridging cultures through media, stories, and Japanese tradition.
     </div>
 
-    <!-- Contact Info -->
     <div style="margin-bottom: 1rem;">
         Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
     </div>
 
-    <!-- Copyright -->
     <div>
-        &copy; 2025 Explore Japanese Culture. All Rights Reserved.
+        © 2025 Explore Japanese Culture. All Rights Reserved.
     </div>
 </footer>
 
