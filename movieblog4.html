@@ -43,7 +43,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
         }
 
         @keyframes titleAnimation {
@@ -123,6 +122,11 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: #555;
+            margin-bottom: 1.5rem; /* Extra space between paragraphs */
+        }
+
+        .container-box p:last-child {
+            margin-bottom: 0; /* Remove extra space after the last paragraph */
         }
 
         /* Background colors for some containers */
@@ -138,12 +142,60 @@
             background-color: #FFF8DC;
         }
 
+        /* References Section */
+        .references-container {
+            background-color: #ffe4e1; /* Light pink */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .references-container h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .references-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem; /* Space between reference paragraphs */
+        }
+
+        .references-container p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Footer Section */
         footer {
             background-color: #3E4A5A;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -160,14 +212,12 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="site-title-container">
             <h1 class="site-title">"Lost in Translation" </h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -180,14 +230,11 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Subheading below the main title -->
         <div class="subheading">
             <h2>By: Kiya Grivalsky</h2>
         </div>
 
-        <!-- Container 1 - Blue Background -->
         <section id="container1" class="blue-background">
             <div class="container-box">
                 <h2>Description of Chosen Media</h2>
@@ -196,7 +243,6 @@
             </div>
         </section>
 
-        <!-- Container 2 - Green Background -->
         <section id="container2" class="green-background">
             <div class="container-box">
                 <h2>Relevance to Intercultural Communications</h2>
@@ -204,7 +250,6 @@
             </div>
         </section>
 
-        <!-- Container 3 - Yellow Background -->
         <section id="container3" class="yellow-background">
             <div class="container-box">
                 <h2>Analysis and Personal Take</h2>
@@ -212,7 +257,6 @@
             </div>
         </section>
 
-        <!-- Container 4 - No Background Color -->
         <section id="container4">
             <div class="container-box">
                 <h2>Summary</h2>
@@ -220,9 +264,17 @@
             </div>
         </section>
 
+        <section class="references-container">
+            <h2>References</h2>
+            <p>Askawa, M. (2023, December 6). Visually poetic: Lost in Translation at 20. Discover Nikkei. Retrieved April 25, 2025, from https://www.discovernikkei.org/en/journal/2023/12/6/lost-in-translation-20/</p>
+            <p>Biswas, S. (2024, May 15). Lost in Translation: A profound exploration of cultural isolation. The Global Educator. Retrieved April 25, 2025, from https://theglobaleducator.net/2024/05/15/lost-in-translation-a-profound-exploration-of-cultural-isolation/</p>
+            <p>King, G. (2017). Lost in Translation. Film Quarterly, 70(3), 68–73. https://doi.org/10.1525/fq.2017.70.3.68</p>
+            <p>Samovar, L. A., Porter, R. E., McDaniel, E. R., & Roy, C. S. (2017). Communication between cultures (9th ed.). Cengage Learning.</p>
+        </section>
+
     </main>
 
-     <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
+    <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
         <div class="container">
             <div style="margin-bottom: 1rem;">
                 <a href="index.html">Home</a> |
@@ -251,7 +303,6 @@
                 © 2025 Explore Japanese Culture. All Rights Reserved.
             </div>
         </div>
-    </footer>
-
+        
 </body>
 </html>
