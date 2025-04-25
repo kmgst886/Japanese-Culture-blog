@@ -43,7 +43,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
         }
 
         @keyframes titleAnimation {
@@ -123,6 +122,11 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: #555;
+            margin-bottom: 1.5rem; /* Added spacing */
+        }
+
+        .container-box p:last-child {
+            margin-bottom: 0; /* Remove extra space after the last paragraph */
         }
 
         /* Background colors for some containers */
@@ -138,12 +142,60 @@
             background-color: #FFF8DC;
         }
 
+        /* References Section */
+        .references-container {
+            background-color: #ffe4e1; /* Light pink */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .references-container h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .references-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem; /* Space between reference paragraphs */
+        }
+
+        .references-container p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Footer Section */
         footer {
             background-color: #3E4A5A;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -160,14 +212,12 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="site-title-container">
             <h1 class="site-title">"The Fast and Furious - Tokyo Drift"</h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -176,18 +226,16 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="sources.html">Sources</a></li>
+                <li><a href="popular.html">Popular Posts</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Subheading below the main title -->
         <div class="subheading">
             <h2>By: Maddie Chamblin</h2>
         </div>
 
-        <!-- Container 1 - Blue Background -->
         <section id="container1" class="blue-background">
             <div class="container-box">
                 <h2>Description of Chosen Media</h2>
@@ -195,7 +243,6 @@
             </div>
         </section>
 
-        <!-- Container 2 - Green Background -->
         <section id="container2" class="green-background">
             <div class="container-box">
                 <h2>Relevance to Intercultural Communication</h2>
@@ -209,7 +256,6 @@
             </div>
         </section>
 
-        <!-- Container 3 - Yellow Background -->
         <section id="container3" class="yellow-background">
             <div class="container-box">
                 <h2>Analysis and Personal Take</h2>
@@ -217,7 +263,6 @@
             </div>
         </section>
 
-        <!-- Container 4 - No Background Color -->
         <section id="container4">
             <div class="container-box">
                 <h2>Summary</h2>
@@ -225,20 +270,50 @@
             </div>
         </section>
 
+        <section class="references-container">
+            <h2>References</h2>
+            <p>Building Intercultural Competence - Intercultural Cities Programme - www.coe.int. (n.d.). https://www.coe.int/en/web/interculturalcities/intercultural-competence</p>
+            <p></p>
+            <p>Gudykunst, W. B., & Kim, Y. Y. (2003). Communicating with strangers: An approach to intercultural communication. McGraw-Hill.</p>
+            <p></p>
+            <p>Hall, E. T. (1976). Beyond culture. Anchor Books.</p>
+            <p></p>
+            <p>Japanupclose.web-japan.org Japan Up Close. (2023, October 13). The Appeal of Learning the Japanese Language.</p>
+            <p></p>
+            <p>Oberg. (2019). U Curve Theory. UGA. https://isl.uga.edu/wp-content/uploads/sites/8/2020/09/UCurveTheory-CCA.pdf</p>
+        </section>
+
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <h2> References </h2>
-        <p>Building Intercultural Competence - Intercultural Cities Programme - www.coe.int. (n.d.). https://www.coe.int/en/web/interculturalcities/intercultural-competence</p>
-        <p></p>
-        <p>Gudykunst, W. B., & Kim, Y. Y. (2003). Communicating with strangers: An approach to intercultural communication. McGraw-Hill.</p>
-        <p></p>
-        <p>Hall, E. T. (1976). Beyond culture. Anchor Books.</p>
-        <p></p>
-        <p>Japanupclose.web-japan.org Japan Up Close. (2023, October 13). The Appeal of Learning the Japanese Language.</p>
-        <p></p>
-        <p>Oberg. (2019). U Curve Theory. UGA. https://isl.uga.edu/wp-content/uploads/sites/8/2020/09/UCurveTheory-CCA.pdf</p>
+        <div class="container">
+            <div style="margin-bottom: 1rem;">
+                <a href="index.html">Home</a> |
+                <a href="categories.html">Our Movie Blogs</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="sources.html">Sources</a> |
+                <a href="popular.html">Popular Posts</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://pinterest.com" target="_blank">Pinterest</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                📩 <em>Subscribe for updates on Japanese culture and media.</em>
+            </div>
+            <div style="margin-bottom: 1rem; font-style: italic;">
+                Bridging cultures through media, stories, and Japanese tradition.
+            </div>
+            <div style="margin-bottom: 1rem;">
+                Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
+            </div>
+            <div>
+                © 2025 Explore Japanese Culture. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
 </body>
