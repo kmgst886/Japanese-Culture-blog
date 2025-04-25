@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>"The Fast and Furious - Tokyo Drift"</title>
+    <title>"Spirited Away"</title>
     <style>
         /* General Reset */
         * {
@@ -43,7 +43,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
         }
 
         @keyframes titleAnimation {
@@ -123,6 +122,11 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: #555;
+            margin-bottom: 1.5rem; /* Added spacing */
+        }
+
+        .container-box p:last-child {
+            margin-bottom: 0; /* Remove extra space after the last paragraph */
         }
 
         /* Background colors for some containers */
@@ -169,8 +173,29 @@
         footer {
             background-color: #3E4A5A;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -199,7 +224,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Our Movie Blogs</a></li>
                 <li><a href="about.html">About us</a></li>
-                <li><a href="cantact.html">Conatct us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="sources.html">Sources</a></li>
+                <li><a href="popular.html">Popular Posts</a></li>
             </ul>
         </div>
     </nav>
@@ -250,11 +277,36 @@
     </main>
 
     <footer>
-        <H2>References</H2>
-        <p>Hartman, E. (2017). Tradition vs. Innovation and the Creatures in Spirited Away. Digital Literature Review, 4, 104–117. https://doi.org/10.33043/dlr.4.0.104-117</p>
-        <p>ibatterma@conncoll.edu. (n.d.). An analysis of the “Japan-ness” of Spirited Away – Asian art and architecture. https://diluo.digital.conncoll.edu/Asianart/uncategorized/an-analysis-of-the-japan-ness-of-spirited-away/</p>
-        <p>Spirited away as social criticism. (2022, August 1). The Artifice. https://the-artifice.com/spirited-away-social-criticism/</p>
+        <div class="container">
+            <div style="margin-bottom: 1rem;">
+                <a href="index.html">Home</a> 
+                <a href="categories.html">Our Movie Blogs</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="sources.html">Sources</a> |
+                <a href="popular.html">Popular Posts</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://pinterest.com" target="_blank">Pinterest</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                📩 <em>Subscribe for updates on Japanese culture and media.</em>
+            </div>
+            <div style="margin-bottom: 1rem; font-style: italic;">
+                Bridging cultures through media, stories, and Japanese tradition.
+            </div>
+            <div style="margin-bottom: 1rem;">
+                Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
+            </div>
+            <div>
+                © 2025 Explore Japanese Culture. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
 </body>
 </html>
+                
