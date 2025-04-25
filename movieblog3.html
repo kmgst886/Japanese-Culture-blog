@@ -43,7 +43,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
         }
 
         @keyframes titleAnimation {
@@ -123,6 +122,11 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: #555;
+            margin-bottom: 1.5rem; /* Extra space between paragraphs */
+        }
+
+        .container-box p:last-child {
+            margin-bottom: 0; /* Remove extra space after the last paragraph */
         }
 
         /* Background colors for some containers */
@@ -138,12 +142,60 @@
             background-color: #FFF8DC;
         }
 
+        /* References Section */
+        .references-container {
+            background-color: #ffe4e1; /* Light pink */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .references-container h2 {
+            font-size: 2rem;
+            color: #3E4A5A;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .references-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem; /* Space between reference paragraphs */
+        }
+
+        .references-container p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Footer Section */
         footer {
             background-color: #3E4A5A;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -160,77 +212,97 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="site-title-container">
-            <h1 class="site-title">"Tampopo" </h1>
+            <h1 class="site-title">"Lost in Translation" </h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Our Movie Blogs</a></li>
                 <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">About</a></li>
+                <li><a href="contact.html">Conatct us</a></li>
                 <li><a href="sources.html">Sources</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Subheading below the main title -->
         <div class="subheading">
-            <h2>By: Taryn Ferguson</h2>
+            <h2>By: Kiya Grivalsky</h2>
         </div>
 
-        <!-- Container 1 - Blue Background -->
         <section id="container1" class="blue-background">
             <div class="container-box">
                 <h2>Description of Chosen Media</h2>
-                <p>Tampopo, is about a woman named Tampopo who wants to make the perfect bowl of ramen. She runs a small noodle shop, and with the help of a kind truck driver named Goro and a few food obsessed strangers, she sets out to learn how to make ramen that really means something. While the story is full of silly moments and funny characters, it also gives us a closer look at Japanese culture, especially how important food is in people’s lives.</p>
+                <p>For the purpose of this blog, I chose to discuss the movie “Lost in Translation (2003)”, a film directed by Sofia Coppola. For those who many not be familiar with the film, it features Bob Harris (Bill Murphy) and Charlotte (Scarlett Johansson), who each are portrayed as American Strangers. They meet in Tokyo and form an unlikely friendship as they navigate lonely feelings in foreign culture. Each of the characters lives are currently falling apart from an emotional stand point. Bill Murphy was a former movie star who is no longer in the spotlight, while Scarlett Johansson is just getting out of grad-school and has been abandoned by her boyfriend who is doing business. She is then left to explore Tokyo all on her own. Each of the characters can relate to one other through having sad and disconnected phone calls with their significant other. The two characters end up meeting each other out of boredom and they each were left with nobody else to relate to or talk with.</p>
+                <p>This movie captures many key aspects or examples of Japanese culture such as the language barrier, cultural norms, and the contrast between not only modern but also traditional Japanese practices. The movie does a good job on demonstrating how characters feel a very strong disconnection while they are in this environment that is rather unfamiliar to them. As viewer of the movie, we witness an intimate view of the complexities involved in cross-cultural communication. According to an article from Discover Nikkei, “Visually, the movie does a great job of showing a lyrical Tokyo with colors and long shots and you can see the urban landscape in a way that it is downright poetic” (Askawa 2023). The film also shows some of thing things that we anticipate that Japanese culture is about. However, according to article “Lost in Translation”, “Coppola wavers between insight into the comedy of cultural difference and clichéd cultural stereotyping” (King 2017). The film is more focused on enforcing how the characters feel and interact in the environment rather than representing Tokyo itself. The film’s exploration of isolation, culture shock, and the adaptation of foreign setting provides not only an accessible but also an insightful look into Japanese culture. This movie is a significant resource when understanding how those live and communicate in Japanese culture. </p>
             </div>
         </section>
 
-        <!-- Container 2 - Green Background -->
         <section id="container2" class="green-background">
             <div class="container-box">
-                <h2>Relevance to Intercultural Communication</h2>
-                <p>Food also plays a huge role in shaping identity. According to Counihan and Van Esterik, what we eat, and how we eat it, can say a lot about who we are (Counihan et al., 2019). Even though ramen originally came from China, it’s become a big part of Japanese culture. Tampopo shows how ramen has transformed into something deeply Japanese, and that change is part of cultural adaptation. This is when traditions mix and evolve over time as people from different backgrounds share ideas and customs. Tan talks about cultural adaption in his writing about Chinese communities in Malaysia. He explains how people use food to hold onto their roots, even while living in new places and blending with new cultures (The Globalization of Chinese Food 2012). In the same way, Tampopo shows how ramen carries both history and the future. It proves that food can help people keep their identity while still changing with the world around them.</p>
-                <p>Another thing the movie shows is how important teamwork and helping others are in Japanese society. Hofstede says Japan is a collectivist culture, which means people care a lot about the group as a whole, not just themselves (Hofstede, 2011). In the movie, tons of different people help Tampopo, even strangers, and they don’t expect anything in return. They just want to see her succeed. That sense of community and shared effort is a big part of the collectivist culture.</p>
+                <h2>Relevance to Intercultural Communications</h2>
+                <p>This movie can be significantly related to the topics that we discussed in class through the textbook Communication Between Cultures by Samovar, Porter, McDaniel, and Roy (2017). One significant example of this representation is how the film illustrates the idea of cultural adaptation and the concept of high and low content cultures. In the movie, the actors communicate through implicit messages and non-verbal cues. This means that in this case we would say that Japan is a high content culture. An example of this that can be found in the movie would be when the two characters (Bob and Charlotte) struggle to interpret social cues and the unspoken environment around them. This difficulty in understand often needs to mixed feelings of both confusion and frustration among the characters, especially when trying to interact with any of the locals. The characters’ experiences align with the textbook’s discussion of culture shock, as both characters face both significant amounts of both stress and disorientation while facing Japan’s social dynamics that were rather unfamiliar to them. The characters also experience a significant amount of isolation. We as viewers can see this being portrayed in the movie when the show on of the most “poignant scenes depicting Charlotte’s isolation is when she is alone in her hotel room, looking out at the sprawling city of Tokyo,”according to an article from The Global Educator (Biswas 2024). They often incorporate large windows and modify the camera angles to make Charlotte appear small and isolated amongst the city around her. Another example of how this movie related to the textbook is how the movie portrayed how the characters suffered from interpersonal communication challenges due to coming from different cultural backgrounds. This idea also highlights the importance of cultural sensitivity and empathy of other when we are trying to bring several communication gaps together among several different cultures. These examples are not only explain the comparison that can be seen between the movie and the textbook but also the examples can be seen in the real would today. These examples not only help us to understand better but it also helps us to deepen our understanding on intercultural communications. </p>
             </div>
         </section>
 
-        <!-- Container 3 - Yellow Background -->
         <section id="container3" class="yellow-background">
             <div class="container-box">
                 <h2>Analysis and Personal Take</h2>
-                <p>One thing I learned from Tampopo is that food isn’t just about filling your stomach. It’s a way people express their feelings, show respect, and build relationships. In Japanese culture, how people eat and the rules around food matter a lot. These little things, like how a dish is served or how someone slurps their noodles, can say more than words. That connects to something we learned in class about high-context cultures. In these cultures, people don’t always say things directly, instead, they rely on actions, body language, and shared traditions to communicate (Samovar et al., 2025). You see high context repeated in the film a lot, characters don’t always talk about how important food is, but you can tell just by the way they prepare it and eat it together. She learns from all kinds of people, and each one teaches her something different about food and life. It shows ethnographic communication, which is when we learn about a culture through its everyday habits and traditions (Samovar et al., 2025).</p>
-                <p>Tampopo also shows cultural transmission. Cultural transmission is how people pass down their values and traditions to the next generation (Samovar et al., 2025). In the film, you see this when characters teach each other how to cook and how to act respectfully at the table. It reminds us that food isn’t just something we eat, it’s something we learn. It’s part of how we stay connected to our families, our past, and our culture. A famous scholar named Roland Barthes once said that food is full of hidden meanings (Barthes, 2018). In Tampopo, you see that idea in action. The way ramen is made and served in the movie shows how much the characters care about doing things right. Everything from the broth to the toppings is prepared with care and precision, showing values like hard work, attention to detail, and pride in craftsmanship.</p>
+                <p>After watching the movie, I do believe not only does the movie align with a lot of topics that we went over in the textbook but I feel that it has also helped me to better understand Japanese culture. I can’t say that I really understood the culture prior to watching the movie. I always knew that it was different but I never really expected how lost and confused someone would be in that culture. I have never really traveled all that much, or I should say out of the country. So, for the most part I don’t really know what to expect from other cultures other then things I have heard or saw in movies. However, I usually don’t tend to believe what I see in movies, because the film production team usually makes it more about what they want you to see rather than what it actually. However, for this movie it seems to make a good overall comparison to the actual culture. </p>
             </div>
         </section>
 
-        <!-- Container 4 - No Background Color -->
         <section id="container4">
             <div class="container-box">
                 <h2>Summary</h2>
-                <p>In the end, Tampopo is way more than just a fun movie about noodles. It’s a film that shows how powerful food can be, not just to feed people, but to connect them. It gives us a peek into Japanese values like respect, teamwork, and tradition, all through the lens of something as simple as a bowl of ramen. By looking at concepts like high context communication, collectivism, ethnography, and cultural transmission, we get a better understanding of how food matters in Japanese culture. The movie reminds us that food has a way of telling stories, sharing culture, and bringing people closer together.</p>
+                <p>The movie “Lost in Translation (2003),” is a movie that not only shows the struggles that an outsider faces in another environment or culture but it also demonstrates examples we see in the textbook. The movie is told through a story of two American strangers who are stressed while trying to communicate and interact with the Japanese culture. Through this we see a strong sense of isolation, culture shock, and the struggle to adapt to another world/ culture among the characters. The movie not only deepens our understanding of Japanese culture but it also can deepen our understanding of intercultural communications as a whole. The movie can be connected to topics that we discussed in the textbook “Communication Between Cultures” by Samovar (2017), through how the film illustrates the idea of adapting to different cultures  and the concept of high and low content cultures. We can vision this in the movie when the actors start to experience a struggle when trying to understand social cues and the unspoken communication in the culture that is surrounding them. This example then aligns with the textbook because the actors often experience a feeling of confusion and frustration because they feel that they are getting nowhere with the other party.  Overall, this movie highlights how we need to have empathy when exploring other cultures and trying to bring them together. </p>
             </div>
+        </section>
+
+        <section class="references-container">
+            <h2>References</h2>
+            <p>Askawa, M. (2023, December 6). Visually poetic: Lost in Translation at 20. Discover Nikkei. Retrieved April 25, 2025, from https://www.discovernikkei.org/en/journal/2023/12/6/lost-in-translation-20/</p>
+            <p>Biswas, S. (2024, May 15). Lost in Translation: A profound exploration of cultural isolation. The Global Educator. Retrieved April 25, 2025, from https://theglobaleducator.net/2024/05/15/lost-in-translation-a-profound-exploration-of-cultural-isolation/</p>
+            <p>King, G. (2017). Lost in Translation. Film Quarterly, 70(3), 68–73. https://doi.org/10.1525/fq.2017.70.3.68</p>
+            <p>Samovar, L. A., Porter, R. E., McDaniel, E. R., & Roy, C. S. (2017). Communication between cultures (9th ed.). Cengage Learning.</p>
         </section>
 
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <H2>References</H2>
-        <p>Barthes, R. (2018). Toward a psychosociology of contemporary food consumption. Food and Culture, 13–20. https://doi.org/10.4324/9781315680347-2</p>
-        <p>Counihan, C., Van Esterik, P., & Julier, A. P. (2019). Food and culture: A reader. Routledge.</p>
-        <p>Hofstede, G. (2011). Dimensionalizing Cultures: The Hofstede Model in Context. Online Readings in Psychology and Culture, 2(1). https://doi.org/10.9707/2307-0919.1014</p>
-        <p>Samovar, L. A., Porter, R. E., McDaniel, E. R., Roy, C. S., & Fuimura, C. K. (2025). Communication between cultures. Cengage Learning.</p>
-        <p>Wu, David Y. H, & Cheung, Sidney C. H. (2012). The globalization of Chinese Food. Honolulu : University of Hawaii Press. </p>
+    <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
+        <div class="container">
+            <div style="margin-bottom: 1rem;">
+                <a href="index.html">Home</a> |
+                <a href="categories.html">Our Movie Blogs</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="sources.html">Sources</a> |
+                <a href="popular.html">Popular Posts</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://pinterest.com" target="_blank">Pinterest</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                📩 <em>Subscribe for updates on Japanese culture and media.</em>
+            </div>
+            <div style="margin-bottom: 1rem; font-style: italic;">
+                Bridging cultures through media, stories, and Japanese tradition.
+            </div>
+            <div style="margin-bottom: 1rem;">
+                Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
+            </div>
+            <div>
+                © 2025 Explore Japanese Culture. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
 </body>
