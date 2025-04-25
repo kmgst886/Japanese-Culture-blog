@@ -39,18 +39,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
-        }
-
-        @keyframes titleAnimation {
-            0%, 100% {
-                transform: scale(1);
-                color: #F8AFA6;
-            }
-            50% {
-                transform: scale(1.1);
-                color: #F8AFA6;
-            }
         }
 
         /* Navigation Bar */
@@ -99,7 +87,7 @@
         section {
             padding: 2rem;
             margin: 2rem 0;
-            background-color: #f8f8f8;
+            background-color: #e0eaf5; /* Very light indigo color */
             border-radius: 8px;
         }
 
@@ -178,8 +166,29 @@
         footer {
             background-color: #3E4A5A;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -204,14 +213,12 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="site-title-container">
             <h1 class="site-title">About Us/ Meet Our Team</h1>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="container">
             <ul>
@@ -224,20 +231,16 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
 
-        <!-- About Section -->
         <section id="about">
             <h2>About Us</h2>
             <p>We are a group of passionate individuals who are deeply interested in Japanese culture. Through this blog, we aim to share our insights, discoveries, and experiences in exploring the rich traditions, modern advancements, and timeless beauty of Japan.</p>
         </section>
 
-        <!-- Team Profiles -->
         <section>
             <h2>Meet Our Team</h2>
             <div class="team-profiles">
-                <!-- Team Member 1 -->
                 <div class="profile">
                     <img src="groupphoto1.png" alt="Team Member 1">
                     <h3>Maddie Chamblin</h3>
@@ -248,18 +251,16 @@
                     <p>Project Role: Fast and Furious Tokyo Drift</p>
                 </div>
 
-                <!-- Team Member 2 -->
                 <div class="profile">
                     <img src="team-member2.jpg" alt="Team Member 2">
                     <h3>Vanessa Comulada</h3>
-                    <p>School: Robert Morris University<p/> 
+                    <p>School: Robert Morris University<p/>
                     <p>Major: Business Management</p>
                     <p>Hobbies: Video Games and Crocheting</p>
                     <p>Background:...</p>
                     <p>Project Role: Author of Through the Spirit World: Intercultural Communication in Spirited Away</p>
                 </div>
 
-                <!-- Team Member 3 -->
                 <div class="profile">
                     <img src="team-member3.jpg" alt="Team Member 3">
                     <h3>Taryn Ferguson</h3>
@@ -267,11 +268,10 @@
                     <p>Project Role: </p>
                 </div>
 
-                <!-- Team Member 4 -->
                 <div class="profile">
                     <img src="team-member4.jpg" alt="Team Member 4">
                     <h3>Kiya Grivalsky</h3>
-                    <p>School: Robert Morris University </p> 
+                    <p>School: Robert Morris University </p>
                     <p>Major: Design UX/UI </p>
                     <p>Hobbies: Drawing, playing basketball, 3D modeling </p>
                     <p>Background: Mangement, User interface Design, Graphics</p>
@@ -280,7 +280,6 @@
             </div>
         </section>
 
-        <!-- Why the Blog Exists -->
         <section>
             <div class="info-box">
                 <h3>Why This Blog Exists</h3>
@@ -288,7 +287,6 @@
             </div>
         </section>
 
-        <!-- Importance of Japanese Culture -->
         <section>
             <div class="info-box">
                 <h3>Why Japanese Culture is Important</h3>
@@ -298,10 +296,33 @@
 
     </main>
 
-    <!-- Footer Section -->
-    <footer>
+    <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
         <div class="container">
-            <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+            <div style="margin-bottom: 1rem;">
+                <a href="index.html">Home</a> |
+                <a href="categories.html">Our Movie Blogs</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="sources.html">Sources</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://pinterest.com" target="_blank">Pinterest</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                📩 <em>Subscribe for updates on Japanese culture and media.</em>
+            </div>
+            <div style="margin-bottom: 1rem; font-style: italic;">
+                Bridging cultures through media, stories, and Japanese tradition.
+            </div>
+            <div style="margin-bottom: 1rem;">
+                Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
+            </div>
+            <div>
+                © 2025 Explore Japanese Culture. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
