@@ -44,18 +44,6 @@
             font-family: 'Georgia', serif;
             font-size: 4rem;
             color: white;
-            animation: titleAnimation 3s ease-in-out infinite;
-        }
-
-        @keyframes titleAnimation {
-            0%, 100% {
-                transform: scale(1);
-                color: #F8AFA6;
-            }
-            50% {
-                transform: scale(1.1);
-                color: #F8AFA6;
-            }
         }
 
         /* Menu Bar Container */
@@ -199,18 +187,45 @@
             background-color: #F8AFA6;
         }
 
+        /* Footer Section */
+        footer {
+            background-color: #3E4A5A;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="site-title-container">
             <h1 class="site-title">Explore Japanese Culture</h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -224,12 +239,10 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
         <h2>Contact Us & Share Your Thoughts!</h2>
         <p>We'd love to hear your thoughts on Japanese culture. Feel free to post a blog and share your ideas with us! Other visitors can reply to your post.</p>
 
-        <!-- Contact Form -->
         <div class="contact-form">
             <h3>Post Your Thoughts</h3>
             <form id="postForm">
@@ -239,15 +252,39 @@
             </form>
         </div>
 
-        <!-- Posts Section -->
         <div class="posts-container" id="postsContainer">
-            <!-- Posts will appear here dynamically -->
-        </div>
+            </div>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Explore Japanese Culture. All Rights Reserved.</p>
+    <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
+        <div class="container">
+            <div style="margin-bottom: 1rem;">
+                <a href="index.html">Home</a> |
+                <a href="categories.html">Our Movie Blogs</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="sources.html">Sources</a> |
+                <a href="popular.html">Popular Posts</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://pinterest.com" target="_blank">Pinterest</a>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                📩 <em>Subscribe for updates on Japanese culture and media.</em>
+            </div>
+            <div style="margin-bottom: 1rem; font-style: italic;">
+                Bridging cultures through media, stories, and Japanese tradition.
+            </div>
+            <div style="margin-bottom: 1rem;">
+                Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
+            </div>
+            <div>
+                © 2025 Explore Japanese Culture. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
     <script>
