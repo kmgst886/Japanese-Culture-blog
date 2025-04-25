@@ -193,7 +193,8 @@
         section {
             padding: 2rem;
             margin: 2rem 0;
-            background-color: #f8f8f8;
+            background-color: #f8f8f8; /* Keeping the original as a base */
+            background-color: #f5f5dc; /* Adding a light beige */
             border-radius: 8px;
         }
 
@@ -216,7 +217,8 @@
         }
 
         .category {
-            background-color: #fff;
+            background-color: #fff; /* Keeping the original as a base */
+            background-color: #f0fff0; /* Adding a very pale green */
             padding: 1.5rem;
             flex: 1 1 calc(33% - 1rem);
             border-radius: 8px;
@@ -291,20 +293,19 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="site-title-container">
             <h1 class="site-title">Explore Japanese Culture</h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="categories.html">Our Movie Blogs</a></li>
-                <li><a href="about.html">About</a>
+                <li>
+                    <a href="about.html">About</a>
                     <div class="dropdown">
                         <div class="dropdown-content">
                             <a href="#">History</a>
@@ -321,7 +322,6 @@
         </div>
     </nav>
 
-    <!-- Image Slideshow -->
     <div class="slideshow-container">
         <div class="mySlides fade">
             <img src="japaneseculture.jpeg" alt="Japanese Culture" class="slide-images">
@@ -345,11 +345,10 @@
             <img src="lanterns.jpeg" alt="Japanese Lanterns" class="slide-images">
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
 
-    <!-- Main Content -->
     <main>
         <section id="home">
             <h2>Welcome to the World of Japanese Culture</h2>
@@ -396,66 +395,59 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
-<footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
+    <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
 
-    <!-- Navigation Links -->
-    <div style="margin-bottom: 1rem;">
-        <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Home</a> |
-        <a href="categories.html" style="color: white; margin: 0 10px; text-decoration: none;">Our Movie Blogs</a> |
-        <a href="about.html" style="color: white; margin: 0 10px; text-decoration: none;">About</a> |
-        <a href="contact.html" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a> |
-        <a href="sources.html" style="color: white; margin: 0 10px; text-decoration: none;">Sources</a> |
-    </div>
+        <div style="margin-bottom: 1rem;">
+            <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Home</a> |
+            <a href="categories.html" style="color: white; margin: 0 10px; text-decoration: none;">Our Movie Blogs</a> |
+            <a href="about.html" style="color: white; margin: 0 10px; text-decoration: none;">About</a> |
+            <a href="contact.html" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a> |
+            <a href="sources.html" style="color: white; margin: 0 10px; text-decoration: none;">Sources</a> |
+        </div>
 
-    <!-- Social Media Links -->
-    <div style="margin-bottom: 1rem;">
-        <a href="https://instagram.com" target="_blank" style="color: white; margin: 0 8px;">Instagram</a>
-        <a href="https://twitter.com" target="_blank" style="color: white; margin: 0 8px;">Twitter</a>
-        <a href="https://youtube.com" target="_blank" style="color: white; margin: 0 8px;">YouTube</a>
-        <a href="https://pinterest.com" target="_blank" style="color: white; margin: 0 8px;">Pinterest</a>
-    </div>
+        <div style="margin-bottom: 1rem;">
+            <a href="https://instagram.com" target="_blank" style="color: white; margin: 0 8px;">Instagram</a>
+            <a href="https://twitter.com" target="_blank" style="color: white; margin: 0 8px;">Twitter</a>
+            <a href="https://youtube.com" target="_blank" style="color: white; margin: 0 8px;">YouTube</a>
+            <a href="https://pinterest.com" target="_blank" style="color: white; margin: 0 8px;">Pinterest</a>
+        </div>
 
-    <!-- Newsletter Signup Placeholder -->
-    <div style="margin-bottom: 1rem;">
-        📩 <em>Subscribe for updates on Japanese culture and media.</em>
-    </div>
+        <div style="margin-bottom: 1rem;">
+            📩 <em>Subscribe for updates on Japanese culture and media.</em>
+        </div>
 
-    <!-- Mini Mission or Tagline -->
-    <div style="margin-bottom: 1rem; font-style: italic;">
-        Bridging cultures through media, stories, and Japanese tradition.
-    </div>
+        <div style="margin-bottom: 1rem; font-style: italic;">
+            Bridging cultures through media, stories, and Japanese tradition.
+        </div>
 
-    <!-- Contact Info -->
-    <div style="margin-bottom: 1rem;">
-        Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
-    </div>
+        <div style="margin-bottom: 1rem;">
+            Contact us at: <a href="contact.html" style="color: #F8AFA6;">ExploreJapaneseCulture.com</a>
+        </div>
 
-    <!-- Copyright -->
-    <div>
-        &copy; 2025 Explore Japanese Culture. All Rights Reserved.
-    </div>
-</footer>
+        <div>
+            © 2025 Explore Japanese Culture. All Rights Reserved.
+        </div>
+    </footer>
 
-<script>
-    let slideIndex = 0;
-    showSlides();
+    <script>
+        let slideIndex = 0;
+        showSlides();
 
-    function showSlides() {
-        let slides = document.getElementsByClassName("mySlides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
-    }
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-</script>
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
 
 </body>
 </html>
