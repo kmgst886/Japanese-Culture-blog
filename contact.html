@@ -31,6 +31,33 @@
             color: #F8AFA6;
         }
 
+        /* Header Styling */
+        .site-title-container {
+            background-color: #3E4A5A;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .site-title {
+            font-family: 'Georgia', serif;
+            font-size: 4rem;
+            color: white;
+            animation: titleAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes titleAnimation {
+            0%, 100% {
+                transform: scale(1);
+                color: #F8AFA6;
+            }
+            50% {
+                transform: scale(1.1);
+                color: #F8AFA6;
+            }
+        }
+
         /* Menu Bar Container */
         nav {
             background-color: #F8AFA6;
@@ -175,6 +202,13 @@
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="site-title-container">
+            <h1 class="site-title">Explore Japanese Culture</h1>
+        </div>
+    </header>
 
     <!-- Menu Bar Container -->
     <nav>
