@@ -67,43 +67,27 @@
             color: #3E4A5A;
         }
 
-        /* Title Animation */
+        /* Title Container */
         .title-container {
+            background-color: #3E4A5A; /* Light Indigo Background */
+            padding: 30px 0;
             text-align: center;
             margin-bottom: 2rem;
-            position: relative;
+            border-radius: 15px 15px 0 0;
         }
 
         .animated-title {
             font-size: 3rem;
-            color: #3E4A5A;
-            font-family: 'Brush Script MT', cursive;
+            color: white; /* White Text */
+            font-family: 'Georgia', serif; /* Using Georgia for consistency */
             position: relative;
             overflow: hidden;
+            display: inline-block; /* To contain the border */
         }
 
+        /* Remove Typing Animation */
         .animated-title span {
-            position: absolute;
             white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #3E4A5A;
-            width: 0;
-            animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
         }
 
         /* Main Content */
@@ -113,15 +97,17 @@
 
         section {
             padding: 2rem;
-            margin: 2rem 0;
+            margin-bottom: 2rem; /* Consistent margin */
             background-color: #f8f8f8;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for consistency */
         }
 
         h2 {
             font-size: 2rem;
             color: #3E4A5A;
             margin-bottom: 1rem;
+            text-align: center; /* Center the main heading */
         }
 
         .sources {
@@ -133,10 +119,11 @@
         .source {
             background-color: #fff;
             padding: 1.5rem;
-            flex: 1 1 calc(33% - 1rem);
+            flex: 1 1 calc(33% - 2rem); /* Adjust calculation for margin */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            text-align: left; /* Align text within sources to the left */
         }
 
         .source:hover {
@@ -152,14 +139,46 @@
 
         .source p {
             font-size: 1rem;
+            margin-bottom: 0.5rem; /* Add some spacing below paragraphs */
+        }
+
+        .source a {
+            color: #3E4A5A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source a:hover {
+            text-decoration: underline;
         }
 
         /* Footer Section */
         footer {
             background-color: #3E4A5A;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            font-size: 0.95rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -184,14 +203,12 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        <div class="site-title-container" style="background-color: #3E4A5A; padding: 30px 0; text-align: center; margin-bottom: 2rem; border-radius: 15px 15px 0 0;">
-            <h1 class="animated-title" style="font-family: 'Georgia', serif; font-size: 4rem; color: white; animation: titleAnimation 3s ease-in-out infinite;">Our Sources</h1>
+        <div class="title-container">
+            <h1 class="animated-title">Our Sources</h1>
         </div>
     </header>
 
-    <!-- Menu Bar Container -->
     <nav>
         <div class="container">
             <ul>
@@ -200,130 +217,104 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="sources.html">Sources</a></li>
+                <li><a href="popular.html">Popular Posts</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Animated Title -->
-    <div class="title-container">
-        <h1 class="animated-title"><span>Our Trusted Sources and References</span></h1>
-    </div>
-
-    <!-- Main Content -->
     <main>
-        <section>
-            <h2>Sources & References</h2>
-            <p>Below you will find a list of sources and references used throughout the blog. 
+        <section style="background-color: #F0F8FF;"> <h2>Sources & References</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Below you will find a list of sources and references used throughout the blog.</p>
             <div class="sources">
-                 <div class="sources">
                 <div class="source">
                     <h3>Council of Europe</h3>
-                    <p>Building Intercultural Competence - Intercultural Cities Programme - www.coe.int. (n.d.). https://www.coe.int/en/web/interculturalcities/intercultural-competence</p>
-                    <a href=" https://www.coe.int/en/web/interculturalcities/intercultural-competence<" target="_blank">Visit Website</a>
+                    <p>Building Intercultural Competence - Intercultural Cities Programme - www.coe.int. (n.d.). <a href="https://www.coe.int/en/web/interculturalcities/intercultural-competence" target="_blank">https://www.coe.int/en/web/interculturalcities/intercultural-competence</a></p>
                 </div>
 
                 <div class="source">
-                    <h3>Communicating With Stangers</h3>
-                    <p>Gudykunst, W. B., & Kim, Y. Y. (2003). Communicating with strangers: An approach to intercultural communication. McGraw-Hill.</p>
-                    <a href="https://www.goingglobalu.com/uploads/7/1/4/2/7142705/gudykunst_ch2_communicating_with_strangers__1_.pdf">Visit Website</a>
+                    <h3>Communicating With Strangers</h3>
+                    <p>Gudykunst, W. B., & Kim, Y. Y. (2003). Communicating with strangers: An approach to intercultural communication. McGraw-Hill. <a href="https://www.goingglobalu.com/uploads/7/1/4/2/7142705/gudykunst_ch2_communicating_with_strangers__1_.pdf" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Beyond Culture</h3>
-                    <p>Hall, E. T. (1976). Beyond culture. Anchor Books.<</p>
-                    <a href="https://monoskop.org/images/6/60/Hall_Edward_T_Beyond_Culture.pdf">Visit Website</a>
+                    <p>Hall, E. T. (1976). Beyond culture. Anchor Books. <a href="https://monoskop.org/images/6/60/Hall_Edward_T_Beyond_Culture.pdf" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Japan Up Close</h3>
-                    <p>Japanupclose.web-japan.org Japan Up Close. (2023, October 13). The Appeal of Learning the Japanese Language.</p>
-                    <a href="https://japanupclose.web-japan.org/other/o20231013_1.html">Visit Website</a>
+                    <p>Japanupclose.web-japan.org Japan Up Close. (2023, October 13). The Appeal of Learning the Japanese Language. <a href="https://japanupclose.web-japan.org/other/o20231013_1.html" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Cross Cultural Adjustment</h3>
-                    <p>Oberg. (2019). U Curve Theory. UGA. https://isl.uga.edu/wp-content/uploads/sites/8/2020/09/UCurveTheory-CCA.pdf</p>
-                    <a href="https://isl.uga.edu/wp-content/uploads/sites/8/2020/09/UCurveTheory-CCA.pdf" target="_blank">Visit Website</a>
+                    <p>Oberg. (2019). U Curve Theory. UGA. <a href="https://isl.uga.edu/wp-content/uploads/sites/8/2020/09/UCurveTheory-CCA.pdf" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Unravelling Neo-Colonial Japan: Mythic Metamorphosis and Urban Picturesque in Miyazaki’s Spirited Away</h3>
-                    <p>Hartman, E. (2017). Tradition vs. Innovation and the Creatures in Spirited Away. Digital Literature Review, 4, 104–117. https://doi.org/10.33043/dlr.4.0.104-117</p>
-                    <a href="https://www.researchgate.net/publication/383687792_Unravelling_Neo-Colonial_Japan_Mythic_Metamorphosis_and_Urban_Picturesque_in_Miyazaki's_Spirited_Away">Visit Website</a>
+                    <p>Hartman, E. (2017). Tradition vs. Innovation and the Creatures in Spirited Away. Digital Literature Review, 4, 104–117. <a href="https://www.researchgate.net/publication/383687792_Unravelling_Neo-Colonial_Japan_Mythic_Metamorphosis_and_Urban_Picturesque_in_Miyazaki's_Spirited_Away" target="_blank">Visit Website</a></p>
                 </div>
 
-                <div class="sources">
                 <div class="source">
                     <h3>Asian Art and Archietecture</h3>
-                    <p>ibatterma@conncoll.edu. (n.d.). An analysis of the “Japan-ness” of Spirited Away – Asian art and architecture. https://diluo.digital.conncoll.edu/Asianart/uncategorized/an-analysis-of-the-japan-ness-of-spirited-away/</p>
-                    <a href="https://diluo.digital.conncoll.edu/Asianart/uncategorized/an-analysis-of-the-japan-ness-of-spirited-away/">Visit Website</a>
+                    <p>ibatterma@conncoll.edu. (n.d.). An analysis of the “Japan-ness” of Spirited Away – Asian art and architecture. <a href="https://diluo.digital.conncoll.edu/Asianart/uncategorized/an-analysis-of-the-japan-ness-of-spirited-away/" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Spirited Away as Social Criticism</h3>
-                    <p>Spirited away as social criticism. (2022, August 1). The Artifice. https://the-artifice.com/spirited-away-social-criticism/</p>
-                    <a href="https://www.tokyoreview.net/" target="_blank">Visit Website</a>
+                    <p>Spirited away as social criticism. (2022, August 1). The Artifice. <a href="https://the-artifice.com/spirited-away-social-criticism/" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Temporality and Spatiality of Food: How Community Kitchens Write Food Narratives Amidst Pandemics</h3>
-                    <p>Barthes, R. (2018). Toward a psychosociology of contemporary food consumption. Food and Culture, 13–20. https://doi.org/10.4324/9781315680347-2</p>
-                    <a href="https://www.researchgate.net/publication/354278024_Temporality_and_Spatiality_of_Food_How_Community_Kitchens_Write_Food_Narratives_Amidst_Pandemics">Visit Website</a>
+                    <p>Barthes, R. (2018). Toward a psychosociology of contemporary food consumption. Food and Culture, 13–20. <a href="https://doi.org/10.4324/9781315680347-2" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Food and Culture</h3>
-                    <p>Counihan, C., Van Esterik, P., & Julier, A. P. (2019). Food and culture: A reader. Routledge.</p>
-                    <a href="https://www.taylorfrancis.com/books/edit/10.4324/9781315680347/food-culture-alice-julier">Visit Website</a>
+                    <p>Counihan, C., Van Esterik, P., & Julier, A. P. (2019). Food and culture: A reader. Routledge. <a href="https://www.taylorfrancis.com/books/edit/10.4324/9781315680347/food-culture-alice-julier" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Dimensionalizing Cultures</h3>
-                    <p>Hofstede, G. (2011). Dimensionalizing Cultures: The Hofstede Model in Context. Online Readings in Psychology and Culture, 2(1). https://doi.org/10.9707/2307-0919.1014</p>
-                    <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/8/">Visit Website</a>
+                    <p>Hofstede, G. (2011). Dimensionalizing Cultures: The Hofstede Model in Context. Online Readings in Psychology and Culture, 2(1). <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/8/" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Communication Between Cultures</h3>
-                    <p>Samovar, L. A., Porter, R. E., McDaniel, E. R., Roy, C. S., & Fuimura, C. K. (2025). Communication between cultures. Cengage Learning.</p>
-                    <a href="https://brytewave.redshelf.com">Visit Website</a>
+                    <p>Samovar, L. A., Porter, R. E., McDaniel, E. R., Roy, C. S., & Fuimura, C. K. (2025). Communication between cultures. Cengage Learning. <a href="https://brytewave.redshelf.com" target="_blank">Visit Website</a></p>
                 </div>
 
-                    <div class="sources">
                 <div class="source">
                     <h3>The Globalization of Chinese Food</h3>
-                    <p>Wu, David Y. H, & Cheung, Sidney C. H. (2012). The globalization of Chinese Food. Honolulu : University of Hawaii Press.</p>
-                    <a href="https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a57067b1-f878-4a99-9b6e-6918901657d4/content">Visit Website</a>
+                    <p>Wu, David Y. H, & Cheung, Sidney C. H. (2012). The globalization of Chinese Food. Honolulu : University of Hawaii Press. <a href="https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/a57067b1-f878-4a99-9b6e-6918901657d4/content" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Interpreting Lost in Translation 20 years later</h3>
-                    <p>Askawa, G. (2023, November 30). Interpreting lost in Translation 20 years later. Discover Nikkei. https://discovernikkei.org/en/journal/2023/11/30/lost-in-translation/ </p>
-                    <a href="https://discovernikkei.org/en/journal/2023/11/30/lost-in-translation/">Visit Website</a>
+                    <p>Askawa, G. (2023, November 30). Interpreting lost in Translation 20 years later. Discover Nikkei. <a href="https://discovernikkei.org/en/journal/2023/11/30/lost-in-translation/" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Detailed Analysis of Lost in Translation (2003) by Sofia Coppola</h3>
-                    <p>Biswas, G. (2024, May 20). Detailed analysis of lost in translation (2003) by Sofia Coppola. The Global Educator. https://www.theglobaleducator.org/post/detailed-analysis-of-lost-in-translation-2003-by-sofia-coppola </p>
-                    <a href="https://www.theglobaleducator.org/post/detailed-analysis-of-lost-in-translation-2003-by-sofia-coppola">Visit Website</a>
+                    <p>Biswas, G. (2024, May 20). Detailed analysis of lost in translation (2003) by Sofia Coppola. The Global Educator. <a href="https://www.theglobaleducator.org/post/detailed-analysis-of-lost-in-translation-2003-by-sofia-coppola" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Lost In Translation</h3>
-                    <p>King, H. (2017, May 11). Lost in translation. Film Quarterly. https://filmquarterly.org/2005/09/01/lost-in-translation/ </p>
-                    <a href="https://filmquarterly.org/2005/09/01/lost-in-translation/">Visit Website</a>
+                    <p>King, H. (2017, May 11). Lost in translation. Film Quarterly. <a href="https://filmquarterly.org/2005/09/01/lost-in-translation/" target="_blank">Visit Website</a></p>
                 </div>
 
                 <div class="source">
                     <h3>Japan Up Close</h3>
-                    <p>Japan Up Close. (2023, October 13). The Appeal of Learning the Japanese Language. Japan Up Close.</p>
-                    <a href="https://japanupclose.web-japan.org/other/o20231013_1.html">Visit Website</a>
+                    <p>Japan Up Close. (2023, October 13). The Appeal of Learning the Japanese Language. Japan Up Close. <a href="https://japanupclose.web-japan.org/other/o20231013_1.html" target="_blank">Visit Website</a></p>
                 </div>
             </div>
         </section>
     </main>
 
-   <footer style="background-color: #3E4A5A; color: white; padding: 2rem 1rem; text-align: center; font-size: 0.95rem;">
+    <footer>
         <div class="container">
             <div style="margin-bottom: 1rem;">
                 <a href="index.html">Home</a> |
@@ -352,6 +343,7 @@
                 © 2025 Explore Japanese Culture. All Rights Reserved.
             </div>
         </div>
+    </footer>
 
 </body>
 </html>
