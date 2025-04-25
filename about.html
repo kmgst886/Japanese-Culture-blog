@@ -82,18 +82,22 @@
         /* Main Content */
         main {
             padding: 2rem 0;
+            border: 15px solid #ccc; /* Thicker gray border */
+            border-radius: 15px;
+            margin: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         main > section:first-child {
             background-color: #f8f8f8; /* Original light gray */
             padding: 2rem;
-            margin: 2rem 0;
+            margin: 2rem; /* Added margin for consistent spacing */
             border-radius: 8px;
         }
 
         section {
             padding: 2rem;
-            margin: 2rem 0;
+            margin: 2rem; /* Consistent margin */
             background-color: #e0eaf5; /* Very light indigo color for other sections */
             border-radius: 8px;
         }
@@ -129,6 +133,12 @@
             margin-bottom: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
+        }
+
+        .profile:hover {
+            transform: scale(1.05); /* Enlarge on hover */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
         }
 
         .profile img {
@@ -156,6 +166,12 @@
             margin-bottom: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
+        }
+
+        .info-box:hover {
+            transform: scale(1.03); /* Slightly enlarge on hover */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
         }
 
         .info-box h3 {
@@ -251,7 +267,7 @@
                 <div class="profile">
                     <img src="groupphoto1.png" alt="Team Member 1">
                     <h3>Maddie Chamblin</h3>
-                    <p>School: Robert Morris University<p/>
+                    <p>School: Robert Morris University</p>
                     <p>Major: Public Relations and Avertising</p>
                     <p>Hobbies: Reading and going to the gym</p>
                     <p>Background: Sales experience, writing, and communication</p>
@@ -261,7 +277,7 @@
                 <div class="profile">
                     <img src="vicon.png" alt="Team Member 2">
                     <h3>Vanessa Comulada</h3>
-                    <p>School: Robert Morris University<p/>
+                    <p>School: Robert Morris University</p>
                     <p>Major: Business Management</p>
                     <p>Hobbies: Video Games and Crocheting</p>
                     <p>Background:...</p>
@@ -271,7 +287,7 @@
                 <div class="profile">
                     <img src="ticon.png" alt="Team Member 3">
                     <h3>Taryn Ferguson</h3>
-                    <p>School: Robert Morris University<p/>
+                    <p>School: Robert Morris University</p>
                     <p>Major:....</p>
                     <p>Hobbies:....</p>
                     <p>Background:.....</p>
